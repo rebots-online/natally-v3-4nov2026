@@ -28,3 +28,6 @@ dist/*
 public/ort/
 public/third-party.json
 .netlify/
+firestore-debug.log
+firebase-debug.log
+ui-debug.log

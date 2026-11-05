@@ -1,0 +1,23 @@
+// The account module's text (§3.2 rule 5): the frozen Profile copy, plus the billing.* and souvenir.* keys of §11.11 that its rows use.
+export const strings = {
+  'profile.title': 'Profile',
+  'profile.close': 'CLOSE',
+  'profile.balance': 'BALANCE',
+  'profile.topUp': 'Top Up',
+  'profile.transactions': 'All transactions',
+  'profile.openAtelier': 'Open your atelier',
+  'profile.souvenirPdf': 'Souvenir PDF',
+  'profile.paid': 'paid',
+  'profile.everyPurchase': 'Every purchase on your account.',
+  'profile.restore': 'Restore purchases',
+  'profile.settings': 'Settings',
+  'profile.about': 'About Natally',
+  'profile.signOut': 'Sign out',
+  'billing.rowCredits': 'Exploration credits',
+  'billing.rowSouvenir': 'Souvenir reading',
+  'billing.rowUsage': 'Personal reading',
+  'billing.restored': '{} purchases restored.',
+  'billing.nothing': 'Everything is already on your account.',
+  'souvenir.preparing': 'Being prepared',
+  'share.failed': "That didn't work. Please try again.",
+} as const;

@@ -2,8 +2,8 @@
 import { createHash, timingSafeEqual } from 'node:crypto';
 import type { HandlerContext } from '../../core/index.ts';
 import { HttpError } from '../../core/index.ts';
-import type { ProviderPurchase, Uid } from '../../../src/types/index.ts';
-import type { RegisteredRail } from './index.ts';
+import type { Uid } from '../../../src/types/index.ts';
+import type { RailPurchase, RegisteredRail } from './index.ts';
 
 const SUBSCRIBERS_URL = 'https://api.revenuecat.com/v1/subscribers/';
 const TIMEOUT_MS = 10_000;
@@ -28,7 +28,7 @@ function digest(value: string): Buffer {
 }
 
 /** Every non-subscription purchase on the account, old or new. A non-2xx throws, so the caller writes nothing. */
-async function listPurchases(secretKey: string, uid: Uid): Promise<ProviderPurchase[]> {
+async function listPurchases(secretKey: string, uid: Uid): Promise<RailPurchase[]> {
   if (!secretKey) throw unavailable();
   let res: Response;
   try {
@@ -45,19 +45,20 @@ async function listPurchases(secretKey: string, uid: Uid): Promise<ProviderPurch
   const subscriber = asRecord(asRecord(body)?.subscriber);
   if (!subscriber) throw unavailable();   // a 2xx without a subscriber proves nothing about the account
 
-  const purchases: ProviderPurchase[] = [];
+  const purchases: RailPurchase[] = [];
   for (const [productId, entries] of Object.entries(asRecord(subscriber.non_subscriptions) ?? {})) {
     if (!Array.isArray(entries)) continue;
     for (const raw of entries as NonSubscriptionEntry[]) {
       // Empty counts as absent: a blank id would make every such purchase share one ledger entry.
-      const transactionId = (typeof raw.store_transaction_id === 'string' && raw.store_transaction_id) || (typeof raw.id === 'string' && raw.id) || null;
+      const ids = [raw.store_transaction_id, raw.id].filter((id): id is string => typeof id === 'string' && id !== '');
+      const transactionId = ids[0];
       if (!transactionId || typeof raw.purchase_date !== 'string') {
         console.warn('revenuecat: purchase entry without an id or date, product', productId);
         continue;
       }
       purchases.push({
         rail: raw.store === 'play_store' ? 'revenuecat_play' : 'revenuecat_web',
-        transactionId, productId, purchasedAt: raw.purchase_date, priceLabel: null, sandbox: raw.is_sandbox === true,
+        transactionId, claimIds: [...new Set(ids)], productId, purchasedAt: raw.purchase_date, priceLabel: null, sandbox: raw.is_sandbox === true,
       });
     }
   }

@@ -15,6 +15,7 @@
 | `users/{uid}/souvenirJobs/{snapshotId}` | `SouvenirJob` | owner | owner | none |
 | `serverKeys/{uid}` | `{ currentHash, limitUsd, settledUsd, settleSeq, createdAt, expiresAt }` | none | none | keys |
 | `serverKeys/{uid}/retiring/{hash}` | `{ settledUsd, settleSeq, retiredAt }` | none | none | keys |
+| `purchaseClaims/{rail}_{encodeURIComponent(transactionId)}` | `{ uid, creditedAt }`; one per provider id of a purchase, so a transaction is credited once across all accounts | none | none | reconcile |
 | `serverDelivery/{snapshotId}` | `{ uid, token, publishedAt, emailedAt }` | none | none | souvenir finalize |
 | `publicShares/{shareId}` | `{ ownerUid, name, chart: Pick<Chart,'schema'|'houseSystem'|'houseSystemReason'|'planets'|'angles'|'houses'|'aspects'|'firstHouseFrom'>, createdAt }`, with no birth date, time or place | anyone | owner create and delete | none |
 

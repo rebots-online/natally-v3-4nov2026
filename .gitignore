@@ -23,3 +23,8 @@ dist/*
 # index and editor noise
 .codegraph/
 .DS_Store
+# written by the build
+.generated/
+public/ort/
+public/third-party.json
+.netlify/

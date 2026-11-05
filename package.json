@@ -1,0 +1,71 @@
+{
+  "name": "natally-v3",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "dev": "node scripts/resolve-env.mjs && vite",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@breezystack/lamejs": "1.2.7",
+    "@huggingface/tokenizers": "0.2.0",
+    "@revenuecat/purchases-js": "1.74.0",
+    "@swisseph/browser": "1.4.0",
+    "@tauri-apps/api": "2.12.4",
+    "@tauri-apps/plugin-dialog": "2.8.4",
+    "@tauri-apps/plugin-fs": "2.7.1",
+    "@tauri-apps/plugin-opener": "2.7.2",
+    "firebase": "13.2.0",
+    "firebase-admin": "14.5.0",
+    "fontkit": "2.0.4",
+    "nodemailer": "10.3.1",
+    "onnxruntime-web": "1.31.1",
+    "pdf-lib": "1.17.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router-dom": "7.18.5",
+    "ssh2-sftp-client": "12.1.1",
+    "three": "0.187.0",
+    "workbox-window": "7.4.1",
+    "zustand": "5.0.16"
+  },
+  "devDependencies": {
+    "@netlify/functions": "6.1.0",
+    "@tailwindcss/vite": "4.3.4",
+    "@tauri-apps/cli": "2.12.4",
+    "@types/fontkit": "2.0.9",
+    "@types/node": "26.6.6",
+    "@types/nodemailer": "8.0.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/ssh2-sftp-client": "9.0.6",
+    "@types/three": "0.187.0",
+    "@vitejs/plugin-react": "6.2.1",
+    "esbuild": "0.28.2",
+    "firebase-tools": "15.35.0",
+    "netlify-cli": "27.16.2",
+    "surge": "0.56.0",
+    "tailwindcss": "4.3.4",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.6",
+    "vite-plugin-pwa": "2.0.0"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@firebase/util",
+      "cpu-features",
+      "esbuild",
+      "netlify-cli",
+      "protobufjs",
+      "re2",
+      "ssh2",
+      "unix-dgram"
+    ]
+  }
+}

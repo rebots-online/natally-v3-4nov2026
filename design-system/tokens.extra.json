@@ -1,0 +1,32 @@
+{
+ "note": "Tokens the browsable design-system page has no family for. scripts/build-tokens.mjs merges these with tokens.json into tokens.css.",
+ "motion": {
+  "ease-out": "cubic-bezier(0.22, 0.68, 0.22, 1)",
+  "duration-fast": "140ms",
+  "duration-swap": "240ms",
+  "duration-pane": "380ms",
+  "duration-inset": "620ms",
+  "highlight-pulse": "720ms",
+  "reduced": "When the system asks for reduced motion or the customer turns on Pause motion, nothing loops and transitions are instant."
+ },
+ "layer": {
+  "base": 0,
+  "scene-overlay": 10,
+  "inset": 20,
+  "header": 30,
+  "sheet": 50,
+  "dialog": 60,
+  "toast": 80,
+  "version-badge": 90
+ },
+ "breakpoint": {
+  "phone-max": "767px",
+  "tablet-min": "768px",
+  "desktop-min": "1101px"
+ },
+ "scene": {
+  "aspect": "1586 / 992",
+  "coordinate-width": 2048,
+  "coordinate-height": 1280
+ }
+}

@@ -1,0 +1,77 @@
+{
+  "note": "Latin subsets fetched from Google Fonts on 2026-11-05. All families are licensed under the SIL Open Font License 1.1. The two symbol files are subsets of Noto Sans Symbols and Noto Sans Symbols 2 holding only the astrological glyphs the app draws.",
+  "files": [
+    {
+      "file": "public/fonts/Fraunces-italic-300-700.woff2",
+      "family": "Fraunces",
+      "style": "italic",
+      "weight": "300 700",
+      "bytes": 81520,
+      "sha256": "066710ce7ed235a339d3d6cdcc8b55c0bea5632232662d83aacea25852108271",
+      "source": "https://fonts.gstatic.com/s/fraunces/v38/6NU58FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChjeveQ.woff2"
+    },
+    {
+      "file": "public/fonts/Fraunces-roman-300-700.woff2",
+      "family": "Fraunces",
+      "style": "normal",
+      "weight": "300 700",
+      "bytes": 67304,
+      "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783",
+      "source": "https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2"
+    },
+    {
+      "file": "public/fonts/Cinzel-roman-400-900.woff2",
+      "family": "Cinzel",
+      "style": "normal",
+      "weight": "400 900",
+      "bytes": 25904,
+      "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370",
+      "source": "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2"
+    },
+    {
+      "file": "public/fonts/NunitoSans-italic-300-800.woff2",
+      "family": "NunitoSans",
+      "style": "italic",
+      "weight": "300 800",
+      "bytes": 49416,
+      "sha256": "58018f56b75a6e4d055716027bf286780cb20e26d7875e5bd05d3baa41f0e4f1",
+      "source": "https://fonts.gstatic.com/l/font?kit=pe1kMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t3NeCAAFOvV9SNjrwlNwjM6W3Y6K5T0xJeVy3GboJ0kTHmoP8GUnK_I&skey=8952ce414dafd5f2&v=v19"
+    },
+    {
+      "file": "public/fonts/NunitoSans-roman-300-800.woff2",
+      "family": "NunitoSans",
+      "style": "normal",
+      "weight": "300 800",
+      "bytes": 51924,
+      "sha256": "517ae7dbceb60e15e38cf4a59fd40df87f2e91534f011c9514dab4397af7635d",
+      "source": "https://fonts.gstatic.com/l/font?kit=pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfUVwoNnq4CLz0_upHZPYsZ51Q42pscpul5bxqqtQ1yiU4GVi5Xs1Ul&skey=60bfdc605ddb00b1&v=v19"
+    },
+    {
+      "file": "public/fonts/JetBrainsMono-roman-400-700.woff2",
+      "family": "JetBrainsMono",
+      "style": "normal",
+      "weight": "400 700",
+      "bytes": 31432,
+      "sha256": "83c005d49d8a6a50474c73a5a36ac0468076e9c4a29da7bdb14995d80560a5be",
+      "source": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2"
+    },
+    {
+      "file": "public/fonts/NatallySymbols2-roman-400.woff2",
+      "family": "NatallySymbols2",
+      "style": "normal",
+      "weight": "400",
+      "bytes": 3004,
+      "sha256": "2c076508e9a03049e47c135f13549cdc727e9e4c0ce3c7d2b378427cd446376f",
+      "source": "https://fonts.gstatic.com/l/font?kit=I_uyMoGduATTei9eI8daxVHDyfisHr71ypbyJJRiQeGOqanXQFWMNy3Hi3lT_W2v9YKjiS5ymv3SYS4c2Oyy8D3dmf_fomkUCm3_SDv0m_1AvxyTGgcBuh4NE7XRtlwltyO7lY0t9vQfKpsIymZrowmD2F7WheR8VA&skey=5cf84917987cc637&v=v25"
+    },
+    {
+      "file": "public/fonts/NatallySymbols-roman-400.woff2",
+      "family": "NatallySymbols",
+      "style": "normal",
+      "weight": "400",
+      "bytes": 3468,
+      "sha256": "e658630f824d575fc5eb2e95e31e09ea7ab781b587dbec3ae9c80c57e935a714",
+      "source": "https://fonts.gstatic.com/l/font?kit=rP2up3q65FkAtHfwd-eIS2brbDN6gxP34F9jRRCe4W3gfQ8gb-0crNtSjvSyRUqxFaUjjd9k7YMj3LLrX7fgWktr1S6VD3DtbkPUwjyqFq37llCD7ICGi09Vn0CA9ukyVGGeesPcqLd_M6skMzPBxavvDFcgBG9o-RbW6S30xDf5_q9k&skey=e59169fb45ece077&v=v47"
+    }
+  ]
+}

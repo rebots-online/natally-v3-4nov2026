@@ -1,0 +1,25 @@
+/* What utilities cannot say: pseudo-elements of a range input, keyframes. Colours, sizes and times are tokens. */
+
+.nat-spin { animation: nat-spin 900ms linear infinite; }
+@keyframes nat-spin { to { transform: rotate(360deg); } }
+
+.nat-sheet-in { animation: nat-sheet-in var(--duration-swap) var(--ease-out) both; }
+@keyframes nat-sheet-in { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.nat-fade-in { animation: nat-fade-in var(--duration-swap) var(--ease-out) both; }
+@keyframes nat-fade-in { from { opacity: 0; } to { opacity: 1; } }
+.nat-toast-in { animation: nat-toast-in var(--duration-swap) var(--ease-out) both; }
+@keyframes nat-toast-in { from { transform: translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* Slider: a gold 4px line and a cream knob ringed in the panel colour. The input is 44px tall so a finger finds it. */
+.nat-range { -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer; margin: 0; }
+.nat-range:focus { outline: none; }
+.nat-range:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+.nat-range:focus-visible::-moz-range-thumb { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+.nat-range::-webkit-slider-runnable-track { background: var(--color-gold); height: 4px; border-radius: 2px; }
+.nat-range::-moz-range-track { background: var(--color-gold); height: 4px; border-radius: 2px; }
+.nat-range::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; margin-top: -6px;
+  height: 16px; width: 16px; border-radius: 50%; background: var(--color-cream); border: 2px solid var(--color-panel);
+}
+.nat-range::-moz-range-thumb { height: 16px; width: 16px; border-radius: 50%; background: var(--color-cream); border: 2px solid var(--color-panel); }
+.nat-range:disabled { opacity: 0.4; cursor: not-allowed; }

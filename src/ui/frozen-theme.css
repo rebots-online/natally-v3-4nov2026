@@ -1,0 +1,73 @@
+/* Tailwind for the frozen screens (§3.2 rule 7). The frozen markup was written against Tailwind 3 with these custom names;
+   every colour below points at a design token, so a token change reaches every screen. Scanning is limited to src/. */
+@import "tailwindcss" source(none);
+@source "../";
+
+@theme inline {
+  --color-canvas: var(--color-canvas);
+  --color-canvas-deep: var(--color-ground-deep);
+  --color-deepGround: var(--color-ground-deep);
+  --color-panel: var(--color-panel);
+  --color-elevated: var(--color-elevated);
+  --color-hairline: var(--color-border);
+  --color-cream: var(--color-cream);
+  --color-muted: var(--color-muted);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-goldLight: var(--color-gold-light);
+  --color-coral: var(--color-coral);
+  --color-periwinkle: var(--color-periwinkle);
+  --color-violet: var(--color-violet);
+  --color-mint: var(--color-mint);
+  --color-error: var(--color-error);
+  --color-on-gold: var(--color-on-gold);
+  --color-scrim: var(--color-scrim);
+  --color-status-idle: var(--color-status-idle);
+  --color-status-listening: var(--color-status-listening);
+  --color-status-thinking: var(--color-status-thinking);
+  --color-status-speaking: var(--color-status-speaking);
+  --color-badgeBg: var(--color-ground-deep);
+  --color-badgeText: var(--color-gold-light);
+  /* The landing screen's own pressed gold. It is not a token. */
+  --color-gold-hover: #b58f3b;
+
+  --font-fraunces: var(--font-display);
+  --font-cinzel: var(--font-brand);
+  --font-nunito: var(--font-body);
+  --font-body: var(--font-body);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
+
+  /* Tailwind 3 radius scale as literals: the token --radius-sm (8px) shares a name with Tailwind's own. */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --blur-sm: 4px;
+}
+
+/* Tailwind 3 utilities the frozen markup uses that Tailwind 4 dropped. */
+@utility flex-shrink-0 { flex-shrink: 0; }
+@utility flex-shrink { flex-shrink: 1; }
+@utility flex-grow { flex-grow: 1; }
+@utility placeholder-* {
+  &::placeholder { color: --value(--color-*, [color]); }
+}
+
+@layer base {
+  html { font-variant-emoji: text; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  :focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+}

@@ -1,0 +1,60 @@
+/* Self-hosted, so the app renders the same offline (design-system/README.md). Family names are the ones the tokens use.
+   The two symbol files hold different glyphs, so each declares its own range and the browser draws a glyph from whichever has it. */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/Fraunces-roman-300-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/Fraunces-italic-300-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("/fonts/Cinzel-roman-400-900.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/NunitoSans-roman-300-800.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/NunitoSans-italic-300-800.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/JetBrainsMono-roman-400-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Natally Symbols";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NatallySymbols-roman-400.woff2") format("woff2");
+  unicode-range: U+260A-260D, U+263D, U+263F-2640, U+2642-2653, U+26B7, U+26B9;
+}
+@font-face {
+  font-family: "Natally Symbols";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NatallySymbols2-roman-400.woff2") format("woff2");
+  unicode-range: U+2609, U+25A1, U+25B3, U+2726;
+}

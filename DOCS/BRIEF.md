@@ -15,8 +15,11 @@ The only inputs, as a closed list:
    `8007307049701360266`, design system "Natally").
 3. The brand files, used as they are: `public/brand/` and `public/atelier/`
    (hashes in `design-system/assets-manifest.json`).
-4. Admin-Manual for rules and credentials. Coders never need a credential.
-5. Current official documentation for every library and service.
+4. Pictures of the look to match, opened as images only and only for comparing the
+   finished screens: `/home/robin/Desktop/devProjects/Natally-v2.0-4nov2026/design/reference-screens/v1.42.95682/`
+   (operator machine only; they are not in this repository).
+5. Admin-Manual for rules and credentials. Coders never need a credential.
+6. Current official documentation for every library and service.
 
 ## Frozen UI prototype (Google Stitch) — architecture is written against this
 
@@ -103,6 +106,15 @@ chart, conversation and voice. Profile with balance and every transaction. Top U
 Souvenir offer. Frozen souvenir atelier. Souvenir PDF. Settings. About.
 
 **Chart.** Swiss Ephemeris. Placidus houses; Whole Sign when the birth time is unknown.
+The wheel is a real 3D object: it turns slowly, can be dragged and zoomed, and lights up
+the placement Natally is speaking about. The flat wheel drawn in the prototype is a
+stand-in for it. The same wheel appears large as the main view and small in the inset,
+and the customer can swap the two.
+
+**Room.** The atelier is alive but calm: the room ambience loop and the sound effects
+under `public/atelier/audio/` play only when room sounds are on, Natally's head and
+hands move over the clean-plate art while she speaks, and all motion stops when the
+customer pauses motion or the system asks for reduced motion.
 
 **Voice.** Supertonic text to speech on the device. On install it tests the device's
 resources and calibrates itself. Synthesis is multithreaded. It always generates at least

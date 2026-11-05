@@ -7,7 +7,7 @@ export const strings = {
   'birth.heading': 'When and where were you born?',
   'birth.subheading': 'Natally calculates your chart from this.',
   'birth.submit': 'Calculate my chart',
-  'birth.nameLabel': 'Name Natally should use',
+  'birth.nameLabel': 'Your name',
   'birth.dateLabel': 'Birth date',
   'birth.timeLabel': 'Birth time',
   'birth.timeUnknownLabel': "I don't know my birth time",

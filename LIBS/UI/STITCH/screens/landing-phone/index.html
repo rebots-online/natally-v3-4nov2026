@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing — phone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Fraunces:opsz,wght@9..144,400&family=JetBrains+Mono:wght@400;500&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { font-variant-emoji: text; }
+    body {
+      background-color: #120c1c;
+      color: #f1e8d8;
+      font-family: 'Nunito Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-fraunces {
+      font-family: 'Fraunces', serif;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .eyebrow {
+      color: #b9a0e8;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+    .border-hairline {
+      border-color: #3a2d50;
+    }
+    .bg-panel {
+      background-color: #1a1226;
+    }
+    .bg-elevated {
+      background-color: #2a1d3d;
+    }
+    .text-cream {
+      color: #f1e8d8;
+    }
+    .text-muted {
+      color: #a698b5;
+    }
+    .text-gold {
+      color: #c9a24a;
+    }
+    .bg-gold {
+      background-color: #c9a24a;
+    }
+    .border-gold {
+      border-color: #c9a24a;
+    }
+    .btn-gold {
+      background-color: #c9a24a;
+      color: #120c1c;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      transition: background-color 0.15s ease;
+    }
+    .btn-gold:hover {
+      background-color: #d8b259;
+    }
+    .btn-secondary {
+      background-color: #2a1d3d;
+      border: 1px solid #3a2d50;
+      color: #f1e8d8;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn-secondary:hover {
+      border-color: #c9a24a;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen pb-16 selection:bg-[#c9a24a]/30">
+
+  <!-- 1. Top bar -->
+  <header id="landing-nav" class="sticky top-0 z-40 w-full h-[56px] px-4 flex items-center justify-between bg-[#120c1c] border-b border-[#3a2d50]">
+    <div class="flex items-center gap-2.5">
+      <img src="../../../../../public/brand/natally-still.webp" alt="Natally Logo" class="w-8 h-8 rounded-full border border-[#3a2d50] object-cover flex-shrink-0">
+      <span class="font-cinzel text-[15px] font-bold tracking-widest text-[#f1e8d8] uppercase">Natally</span>
+    </div>
+    <button id="landing-signin-button" class="btn-secondary px-4 py-1.5 rounded-lg">
+      Sign In
+    </button>
+  </header>
+
+  <main class="w-full max-w-[420px] mx-auto px-4 pt-4">
+
+    <!-- 2. The atelier block -->
+    <section id="landing-atelier" class="w-full mb-6">
+      <div class="relative w-full aspect-[1586/992] rounded-[20px] border border-[#3a2d50] overflow-hidden bg-[#1a1226]">
+        <!-- Atelier Scene Image -->
+        <img src="../../../../../public/atelier/room.webp" alt="Natally reading natal chart" class="w-full h-full object-cover">
+
+        <!-- Top right chip -->
+        <div class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full bg-[#120c1c]/90 border border-[#3a2d50] flex items-center gap-1.5 text-[11px] text-[#f1e8d8]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#c9a24a]"></span>
+          <span>Room sounds on</span>
+        </div>
+
+        <!-- Bottom left chart inset panel -->
+        <div id="landing-inset-handle" class="absolute bottom-2.5 left-2.5 w-[116px] p-1.5 rounded-xl bg-[#120c1c]/95 border border-[#c9a24a] shadow-lg">
+          <div class="text-[9px] font-mono text-[#c9a24a] flex items-center gap-1 mb-1">
+            <span>⠇</span>
+            <span>Move chart</span>
+          </div>
+          <div class="w-full aspect-square bg-[#0b0712] rounded-lg flex items-center justify-center p-1 relative overflow-hidden">
+            <svg class="w-full h-full" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="44" stroke="#3a2d50" stroke-width="1" fill="none" />
+              <circle cx="50" cy="50" r="32" stroke="#3a2d50" stroke-width="0.75" stroke-dasharray="2 2" fill="none" />
+              <polygon points="50,10 85,70 15,70" stroke="#c9a24a" stroke-width="1" fill="none" opacity="0.8" />
+              <polygon points="50,90 15,30 85,30" stroke="#b9a0e8" stroke-width="1" fill="none" opacity="0.6" />
+              <line x1="10" y1="50" x2="90" y2="50" stroke="#3a2d50" stroke-width="0.75" />
+              <line x1="50" y1="10" x2="50" y2="90" stroke="#3a2d50" stroke-width="0.75" />
+              <circle cx="50" cy="10" r="2.5" fill="#f1e8d8" />
+              <circle cx="85" cy="70" r="2" fill="#c9a24a" />
+              <circle cx="15" cy="30" r="2" fill="#b9a0e8" />
+              <circle cx="50" cy="50" r="1.5" fill="#f1e8d8" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls row -->
+      <div class="flex items-center gap-2 mt-3">
+        <button id="landing-sound-toggle" class="btn-secondary px-3.5 py-2 rounded-xl flex items-center gap-1.5 flex-shrink-0 text-xs">
+          <svg class="w-3.5 h-3.5 text-[#c9a24a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          </svg>
+          <span>Sound On</span>
+        </button>
+        <div class="relative flex-1">
+          <select id="landing-element-select" class="w-full bg-[#1a1226] border border-[#3a2d50] text-[#a698b5] text-xs rounded-xl py-2 px-3 appearance-none pr-8 focus:outline-none focus:border-[#c9a24a]">
+            <option>Choose a planet, sign, house or aspect</option>
+            <option>Sun in Scorpio</option>
+            <option>Moon in Pisces</option>
+            <option>Venus in Libra</option>
+            <option>7th House</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-[#a698b5]">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example chart disclaimer -->
+      <p class="text-[11px] text-[#a698b5] mt-2.5 leading-relaxed">
+        Example chart — Aurelia, an anonymous example born 8 Nov 1997, 7:05 PM, Toronto. It is not your chart.
+      </p>
+
+      <!-- Create your natal chart button -->
+      <button id="landing-create-chart-button" class="btn-secondary w-full py-2.5 rounded-xl mt-3 flex items-center justify-center gap-1.5 font-medium text-xs">
+        <span>Create your natal chart</span>
+        <span class="text-[#c9a24a]">→</span>
+      </button>
+    </section>
+
+    <!-- 3. Section: Your birth chart, read aloud by Natally -->
+    <section class="w-full mb-8 pt-2">
+      <div class="eyebrow mb-2">NATAL ASTROLOGY, READ ALOUD</div>
+      <h1 class="font-fraunces text-[34px] leading-[1.15] text-[#f1e8d8] mb-3">
+        Your birth chart, read aloud by Natally.
+      </h1>
+      <p class="text-[#a698b5] text-[13.5px] leading-relaxed mb-5">
+        She calculates your chart, speaks your reading and lights up each placement on the wheel as she talks about it. Exploring the room and your chart is free. Spoken readings are prepaid.
+      </p>
+
+      <!-- Souvenir Reading Offer Card -->
+      <div class="bg-[#1a1226] border border-[#3a2d50] rounded-2xl p-4 mb-3">
+        <div class="flex items-baseline justify-between mb-3 border-b border-[#3a2d50]/60 pb-2.5">
+          <span class="font-fraunces text-base text-[#f1e8d8]">Souvenir reading</span>
+          <span class="font-mono text-xs font-semibold text-[#f1e8d8]">US$30</span>
+        </div>
+        <ul class="space-y-2 mb-4 text-[12.5px] text-[#a698b5]">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#b9a0e8] mt-1.5 flex-shrink-0"></span>
+            <span>Your assembled natal chart and personal reading</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#b9a0e8] mt-1.5 flex-shrink-0"></span>
+            <span>A keepsake PDF with a chapter for every planet, sign, aspect and house in your chart</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#b9a0e8] mt-1.5 flex-shrink-0"></span>
+            <span>Your own atelier, frozen in time, to revisit and replay</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#b9a0e8] mt-1.5 flex-shrink-0"></span>
+            <span>Both links in your purchase history and by email</span>
+          </li>
+        </ul>
+        <button id="landing-cta-hero" class="btn-gold w-full py-3 rounded-xl uppercase tracking-wider">
+          Start my reading now!
+        </button>
+        <p class="text-[11px] text-[#a698b5] text-center mt-2.5">
+          One-time purchase. You see the total before you pay.
+        </p>
+      </div>
+
+      <div class="text-left pl-1">
+        <a id="landing-explore-free-link" href="#landing-atelier" class="text-xs text-[#a698b5] underline underline-offset-4 hover:text-[#f1e8d8]">
+          Explore the room free first
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. Hairline & Section: CALCULATED, NOT GUESSED -->
+    <hr class="border-t border-[#3a2d50] my-6">
+    <section class="w-full mb-8">
+      <div class="eyebrow mb-2">CALCULATED, NOT GUESSED</div>
+      <h2 class="font-fraunces text-[28px] leading-[1.2] text-[#f1e8d8] mb-3">
+        Every placement comes from the ephemeris.
+      </h2>
+      <p class="text-[#a698b5] text-[13.5px] leading-relaxed mb-5">
+        Natally's reading starts from your actual birth date, place and time, calculated with Swiss Ephemeris. She talks about what is in your chart, and says plainly what isn't known.
+      </p>
+      <button id="landing-cta-calculated" class="btn-gold w-full py-3 rounded-xl uppercase tracking-wider">
+        Start my reading now!
+      </button>
+    </section>
+
+    <!-- 5. Hairline & Section: SHE SHOWS YOU WHAT SHE MEANS -->
+    <hr class="border-t border-[#3a2d50] my-6">
+    <section class="w-full mb-8">
+      <div class="eyebrow mb-2">SHE SHOWS YOU WHAT SHE MEANS</div>
+      <h2 class="font-fraunces text-[28px] leading-[1.2] text-[#f1e8d8] mb-3">
+        As she speaks, the wheel follows her.
+      </h2>
+      <p class="text-[#a698b5] text-[13.5px] leading-relaxed mb-5">
+        Follow her reading on your chart: each planet or connection lights up as she talks about it. Listen along, or read at your own pace.
+      </p>
+      <button id="landing-cta-wheel" class="btn-gold w-full py-3 rounded-xl uppercase tracking-wider">
+        Start my reading now!
+      </button>
+    </section>
+
+    <!-- 6. Hairline & Section: KEEP ASKING -->
+    <hr class="border-t border-[#3a2d50] my-6">
+    <section class="w-full mb-8">
+      <div class="eyebrow mb-2">KEEP ASKING</div>
+      <h2 class="font-fraunces text-[28px] leading-[1.2] text-[#f1e8d8] mb-3">
+        Explore your life with Natally
+      </h2>
+      <p class="text-[#a698b5] text-[13.5px] leading-relaxed mb-5">
+        Personal readings use purchased credits so Natally can think through your situation and connect the pieces in your chart.
+      </p>
+
+      <!-- Credits offer card -->
+      <div class="bg-[#1a1226] border border-[#3a2d50] rounded-2xl p-4">
+        <div class="flex items-baseline justify-between mb-4">
+          <span class="font-fraunces text-base text-[#f1e8d8]">Exploration credits</span>
+          <span class="font-mono text-xs font-semibold text-[#f1e8d8]">from US$5</span>
+        </div>
+        <button id="landing-cta-credits" class="btn-gold w-full py-3 rounded-xl uppercase tracking-wider">
+          Get reading credits
+        </button>
+      </div>
+    </section>
+
+    <!-- 7. Hairline & Section: Install Natally -->
+    <hr id="landing-install" class="border-t border-[#3a2d50] my-6">
+    <section class="w-full mb-8">
+      <h2 class="font-fraunces text-[28px] leading-[1.2] text-[#f1e8d8] mb-3">
+        Install Natally
+      </h2>
+      <p class="text-[#a698b5] text-[13.5px] leading-relaxed mb-5">
+        On Android, get the Natally app from Google Play: it runs smoother and sounds better. On Windows and Linux, install the desktop app.
+      </p>
+      <button id="landing-install-play" class="w-full py-3 rounded-xl border border-[#c9a24a] text-[#c9a24a] bg-[#1a1226] font-cinzel font-bold text-xs tracking-wider uppercase hover:bg-[#c9a24a]/10 transition-colors">
+        Get it on Google Play
+      </button>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="w-full pt-6 pb-10 border-t border-[#3a2d50] text-center">
+      <p class="text-xs text-[#a698b5] mb-3">
+        Natally · natal astrology companion
+      </p>
+      <div class="flex items-center justify-center gap-4 text-xs text-[#a698b5]">
+        <a id="landing-terms-link" href="#" class="underline underline-offset-4 hover:text-[#f1e8d8]">Terms</a>
+        <a id="landing-privacy-link" href="#" class="underline underline-offset-4 hover:text-[#f1e8d8]">Privacy</a>
+        <a id="landing-contact-link" href="#" class="underline underline-offset-4 hover:text-[#f1e8d8]">Contact Roche Media Services</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Fixed bottom right version badge -->
+  <div class="fixed bottom-3 right-3 z-50 px-2 py-0.5 rounded bg-[#0b0712] border border-[#3a2d50]/80">
+    <span class="font-mono text-[10px] text-[#f2ca50] tracking-wider">v3.1.00001</span>
+  </div>
+
+</body>
+</html>

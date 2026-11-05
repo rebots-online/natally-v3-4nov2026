@@ -1,0 +1,79 @@
+[
+  {
+    "id": "signin-card",
+    "tag": "main",
+    "type": "",
+    "interactive": false,
+    "text": "READINGS BY NATALLY Sign in or create your account before introducing yourself to Natally. Create your free account for"
+  },
+  {
+    "id": "signin-terms-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Terms"
+  },
+  {
+    "id": "signin-privacy-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Privacy Policy"
+  },
+  {
+    "id": "signin-google-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Continue with Google"
+  },
+  {
+    "id": "signin-mode-tabs",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Email Log In Sign Up Phone"
+  },
+  {
+    "id": "signin-tab-login",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Email Log In"
+  },
+  {
+    "id": "signin-tab-signup",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Sign Up"
+  },
+  {
+    "id": "signin-tab-phone",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Phone"
+  },
+  {
+    "id": "signin-email-input",
+    "tag": "input",
+    "type": "email",
+    "interactive": true,
+    "text": "pilgrim@cosmos.org"
+  },
+  {
+    "id": "signin-password-input",
+    "tag": "input",
+    "type": "password",
+    "interactive": true,
+    "text": "••••••••••••"
+  },
+  {
+    "id": "signin-submit-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Log In"
+  }
+]

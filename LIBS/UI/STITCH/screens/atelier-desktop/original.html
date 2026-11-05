@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier — desktop</title>
+  <!-- Google Fonts: Fraunces, Cinzel, Nunito Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=JetBrains+Mono:wght@400;500&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#120c1c',
+            panel: '#1a1226',
+            elevated: '#2a1d3d',
+            hairline: '#3a2d50',
+            cream: '#f1e8d8',
+            muted: '#a698b5',
+            gold: '#c9a24a',
+            coral: '#f2a38c',
+            mint: '#6ee7b7'
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Nunito Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    /* Natally palette strict styling without glows or gradients */
+    body {
+      background-color: #120c1c;
+      color: #f1e8d8;
+      font-family: 'Nunito Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #120c1c;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3a2d50;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c9a24a;
+    }
+
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a698b5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 16px;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-cream min-h-screen flex flex-col justify-between selection:bg-elevated selection:text-gold pb-10">
+
+  <!-- HEADER BAR (id="atelier-header", panel fill, hairline bottom, 72px high) -->
+  <header id="atelier-header" class="w-full h-[72px] bg-panel border-b border-hairline flex items-center justify-between px-6 shrink-0 sticky top-0 z-40">
+    <!-- Left branding -->
+    <div class="flex items-center gap-4">
+      <div class="w-14 h-14 rounded-xl border border-gold overflow-hidden shrink-0 bg-canvas flex items-center justify-center">
+        <img src="https://lh3.googleusercontent.com/aida/AEtjO1XuRNRzb7RUbcZkNBdxegbvWLatcYtMoXmmdxFBllPbOrMGg_R17ygNjW_POfEESv4N7Zx42bh-j5dMKiPcoPO9NS7RtuQGuPCilnsPfp-H3s4e9xix6r4aHVWaQn-9xs5_6N5RVElv8hugdQTXPt1Po0WrZdSCO5HMYH2BWsWOc5vBxbXTYazP0Dou8A8dDVvnyKKeiN9iIz-1ti3mzsTZW9p0PLIOnV6uSzVVWz4yueLhPpMCa4YRZOs" alt="Natally avatar" class="w-full h-full object-cover">
+      </div>
+      <div class="flex items-baseline gap-2.5">
+        <span class="font-cinzel text-xl font-bold tracking-[0.2em] text-gold uppercase">NATALLY</span>
+        <span class="font-serif text-lg text-coral font-medium">[Name]</span>
+      </div>
+    </div>
+
+    <!-- Right action buttons -->
+    <div class="flex items-center gap-3">
+      <!-- 79 Cr · Top Up -->
+      <button id="atelier-topup-button" class="h-9 px-4 rounded-full bg-elevated border border-hairline text-cream hover:border-gold transition-colors text-sm font-medium flex items-center gap-1.5 focus:outline-none focus:border-gold">
+        <span class="font-mono text-gold font-medium">79 Cr</span>
+        <span class="text-muted">·</span>
+        <span>Top Up</span>
+      </button>
+
+      <!-- Souvenir -->
+      <button id="atelier-souvenir-button" class="h-9 px-4 rounded-lg bg-elevated border border-hairline text-cream hover:border-gold transition-colors text-sm font-medium focus:outline-none focus:border-gold">
+        Souvenir
+      </button>
+
+      <!-- Profile -->
+      <button id="atelier-profile-button" class="h-9 px-4 rounded-lg bg-elevated border border-hairline text-cream hover:border-gold transition-colors text-sm font-medium flex items-center gap-2 focus:outline-none focus:border-gold">
+        <svg class="w-4 h-4 text-muted" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+        </svg>
+        <span>Profile</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BODY CONTAINER (max width 1720px, two columns with 24px gap) -->
+  <main class="w-full max-w-[1720px] mx-auto p-6 grid grid-cols-1 xl:grid-cols-12 gap-6 grow items-start">
+    
+    <!-- LEFT COLUMN (about 60 percent: col-span-7) -->
+    <div class="xl:col-span-7 flex flex-col gap-4 w-full">
+
+      <!-- 1. The atelier scene card (id="atelier-scene", aspect 1586 by 992, 20px radius, hairline border) -->
+      <div id="atelier-scene" class="relative w-full rounded-[20px] border border-hairline overflow-hidden bg-panel flex flex-col justify-end" style="aspect-ratio: 1586 / 992;">
+        <!-- Base illustration image of Natally -->
+        <img src="https://lh3.googleusercontent.com/aida/AEtjO1WUWFrQLQ9N3gYxwDV2aCOfLp2RXC8ylQ8GZ072sVHYmxJR1N7166lCAszszj7NSvvPufi6pk26m4N4ZRG_ZQ1YiGB6V9l8B2AloqugOtpel1tBY74EJ7oXgO9i7ixpgzpkr77_-J0BGrDhOCmpQM_FTZQY7HIxzRzk3CE7j1Ha3KTRxf8lemAT8NpvhXuFpCu-0DOPp1VVNrKWB1_ZuwgK4m19dr8OrIIdG0SFpxXiwNEp5nPJ3pMcn6Q" alt="Natally in atelier" class="absolute inset-0 w-full h-full object-cover">
+
+        <!-- Top-left Inset panel (id="atelier-inset", black fill, 1px gold border, 12px radius, about 30% width) -->
+        <div id="atelier-inset" class="absolute top-4 left-4 w-[32%] max-w-[280px] rounded-xl bg-black/95 border border-gold p-3 z-10 flex flex-col gap-2">
+          <div id="atelier-inset-handle" class="flex items-center justify-between text-gold font-mono text-xs tracking-wider cursor-move select-none">
+            <span class="flex items-center gap-1 font-sans font-medium text-gold">
+              <span class="text-gold text-sm leading-none">⠇</span> Move chart
+            </span>
+          </div>
+          <!-- SVG Natal Chart Wheel representation matching Natally design -->
+          <div class="w-full aspect-square relative flex items-center justify-center">
+            <svg class="w-full h-full" viewBox="0 0 200 200">
+              <!-- Outer circle -->
+              <circle cx="100" cy="100" r="92" stroke="#c9a24a" stroke-width="1.2" fill="none" opacity="0.85" />
+              <circle cx="100" cy="100" r="76" stroke="#3a2d50" stroke-width="0.8" fill="none" />
+              <circle cx="100" cy="100" r="26" stroke="#c9a24a" stroke-width="1" fill="none" opacity="0.7" />
+              
+              <!-- House spokes / axes -->
+              <line x1="8" y1="100" x2="192" y2="100" stroke="#c9a24a" stroke-width="1.2" opacity="0.8" />
+              <line x1="100" y1="8" x2="100" y2="192" stroke="#c9a24a" stroke-width="1.2" opacity="0.8" />
+              <line x1="35" y1="35" x2="165" y2="165" stroke="#3a2d50" stroke-width="0.75" />
+              <line x1="165" y1="35" x2="35" y2="165" stroke="#3a2d50" stroke-width="0.75" />
+              
+              <!-- Geometric aspect web triangles -->
+              <polygon points="100,24 165,136 35,136" stroke="#c9a24a" stroke-width="1" fill="none" opacity="0.9" />
+              <polygon points="100,176 165,64 35,64" stroke="#f2a38c" stroke-width="0.8" fill="none" opacity="0.85" />
+              <line x1="100" y1="24" x2="100" y2="176" stroke="#a698b5" stroke-dasharray="2,2" stroke-width="0.75" />
+
+              <!-- Planet / point nodes -->
+              <circle cx="100" cy="24" r="3.5" fill="#c9a24a" />
+              <circle cx="165" cy="136" r="3" fill="#f1e8d8" />
+              <circle cx="35" cy="136" r="3" fill="#f1e8d8" />
+              <circle cx="100" cy="176" r="3.5" fill="#f2a38c" />
+              <circle cx="165" cy="64" r="3" fill="#c9a24a" />
+              <circle cx="35" cy="64" r="3" fill="#c9a24a" />
+              <circle cx="100" cy="100" r="2.5" fill="#f1e8d8" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Top-right chip "Room sounds on" (id="atelier-room-sounds-chip") -->
+        <div id="atelier-room-sounds-chip" class="absolute top-4 right-4 z-10 h-7 px-3 rounded-full bg-black/80 border border-hairline flex items-center gap-2 text-xs font-medium text-cream backdrop-blur-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          <span>Room sounds on</span>
+        </div>
+
+        <!-- Bottom overlay status bar inside card -->
+        <div class="relative z-10 w-full p-4 flex items-center justify-between text-xs bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+          <!-- bottom left status (id="atelier-status") -->
+          <div id="atelier-status" class="flex items-center gap-2 text-cream font-medium">
+            <span class="w-2 h-2 rounded-full bg-cream"></span>
+            <span>Here with you</span>
+          </div>
+
+          <!-- bottom right faint small text "An imagined sky" -->
+          <span class="text-muted/70 text-[11px] font-sans tracking-wide">An imagined sky</span>
+        </div>
+      </div>
+
+      <!-- Under the picture a centred muted caption: "Chart highlights follow Natally's reading" -->
+      <p class="text-center text-muted text-sm font-sans my-0.5">
+        Chart highlights follow Natally's reading
+      </p>
+
+      <!-- 2. Control row -->
+      <div class="flex items-center gap-3 w-full bg-panel p-2.5 rounded-xl border border-hairline">
+        <!-- secondary button "Sound On" with a speaker icon (id="atelier-sound-toggle") -->
+        <button id="atelier-sound-toggle" class="h-10 px-4 rounded-lg bg-elevated border border-hairline hover:border-gold transition-colors text-cream text-sm font-medium flex items-center gap-2 shrink-0 focus:outline-none focus:border-gold">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.764l-4.71-3.764H2a1 1 0 01-1-1V8a1 1 0 011-1h1.673l4.71-3.764a1 1 0 011.000-.16zM14.657 5.343a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 4.657 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-1.879-.646-3.606-1.728-4.985a1 1 0 01-.015-1.414zM12.536 7.464a1 1 0 011.414 0A4.978 4.978 0 0115 10a4.978 4.978 0 01-1.05 3.036 1 1 0 11-1.414-1.414A2.986 2.986 0 0013 10a2.986 2.986 0 00-.464-1.536 1 1 0 010-1.414z"/>
+          </svg>
+          <span>Sound On</span>
+        </button>
+
+        <span class="text-xs text-muted font-medium shrink-0 px-1">Explore a placement</span>
+
+        <!-- select "Choose a planet, sign, house or aspect" (id="atelier-element-select") -->
+        <select id="atelier-element-select" class="h-10 grow appearance-none rounded-lg bg-elevated border border-hairline px-3.5 pr-10 text-cream text-sm focus:outline-none focus:border-gold transition-colors cursor-pointer">
+          <option selected>Choose a planet, sign, house or aspect</option>
+          <option>Venus in Libra (7th House)</option>
+          <option>Sun in Scorpio (8th House)</option>
+          <option>Moon in Pisces (12th House)</option>
+          <option>Mercury in Sagittarius (9th House)</option>
+          <option>Ascendant in Aries (1st House)</option>
+          <option>Midheaven in Capricorn (10th House)</option>
+        </select>
+      </div>
+
+      <!-- 3. One action row of secondary buttons on a single line -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5">
+        <!-- "Share chart" with a share icon (id="atelier-share-button") -->
+        <button id="atelier-share-button" class="h-9 px-3.5 rounded-lg bg-elevated border border-hairline hover:border-gold transition-colors text-cream text-xs font-medium flex items-center gap-1.5 shrink-0 focus:outline-none focus:border-gold">
+          <svg class="w-3.5 h-3.5 text-muted" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+          </svg>
+          <span>Share chart</span>
+        </button>
+
+        <!-- grouped box holding the gold label "Readings" and two buttons "My Horoscope" & "Synastry" -->
+        <div class="flex items-center bg-elevated border border-hairline rounded-lg p-0.5 gap-1 shrink-0">
+          <span class="text-gold font-cinzel text-xs font-semibold px-2 tracking-wider">Readings</span>
+          <button id="atelier-horoscope-button" class="h-8 px-2.5 rounded-md bg-panel border border-hairline/80 hover:border-gold text-cream text-xs font-medium transition-colors focus:outline-none focus:border-gold">
+            My Horoscope
+          </button>
+          <button id="atelier-synastry-button" class="h-8 px-2.5 rounded-md bg-panel border border-hairline/80 hover:border-gold text-cream text-xs font-medium transition-colors focus:outline-none focus:border-gold">
+            Synastry
+          </button>
+        </div>
+
+        <!-- "Room" (id="atelier-view-room-button") -->
+        <button id="atelier-view-room-button" class="h-9 px-3.5 rounded-lg bg-elevated border border-hairline hover:border-gold transition-colors text-cream text-xs font-medium shrink-0 focus:outline-none focus:border-gold">
+          Room
+        </button>
+
+        <!-- "Your chart" (id="atelier-view-chart-button") -->
+        <button id="atelier-view-chart-button" class="h-9 px-3.5 rounded-lg bg-elevated border border-hairline hover:border-gold transition-colors text-cream text-xs font-medium shrink-0 focus:outline-none focus:border-gold">
+          Your chart
+        </button>
+
+        <!-- "Pause motion" (id="atelier-pause-motion-button") -->
+        <button id="atelier-pause-motion-button" class="h-9 px-3.5 rounded-lg bg-elevated border border-hairline hover:border-gold transition-colors text-cream text-xs font-medium shrink-0 focus:outline-none focus:border-gold">
+          Pause motion
+        </button>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN (about 40 percent: col-span-5) -->
+    <!-- conversation panel (id="atelier-conversation", panel fill, 16px radius, hairline), as tall as the left column -->
+    <div id="atelier-conversation" class="xl:col-span-5 w-full bg-panel rounded-[16px] border border-hairline flex flex-col justify-between self-stretch min-h-[640px] xl:min-h-0">
+      
+      <!-- Top Section: Header & Conversation Messages -->
+      <div class="flex flex-col grow">
+        
+        <!-- Header row -->
+        <div class="h-16 px-5 border-b border-hairline flex items-center justify-between shrink-0">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full border border-gold overflow-hidden bg-canvas shrink-0">
+              <img src="https://lh3.googleusercontent.com/aida/AEtjO1XuRNRzb7RUbcZkNBdxegbvWLatcYtMoXmmdxFBllPbOrMGg_R17ygNjW_POfEESv4N7Zx42bh-j5dMKiPcoPO9NS7RtuQGuPCilnsPfp-H3s4e9xix6r4aHVWaQn-9xs5_6N5RVElv8hugdQTXPt1Po0WrZdSCO5HMYH2BWsWOc5vBxbXTYazP0Dou8A8dDVvnyKKeiN9iIz-1ti3mzsTZW9p0PLIOnV6uSzVVWz4yueLhPpMCa4YRZOs" alt="Natally" class="w-full h-full object-cover">
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-cinzel text-sm font-bold tracking-[0.18em] text-gold uppercase">NATALLY</span>
+              <!-- small mint dot -->
+              <span class="w-2 h-2 rounded-full bg-mint"></span>
+            </div>
+          </div>
+
+          <!-- right three icon buttons: speaker, sliders, download -->
+          <div class="flex items-center gap-1">
+            <!-- speaker (id="conversation-read-aloud-toggle") -->
+            <button id="conversation-read-aloud-toggle" title="Read aloud" class="w-9 h-9 rounded-lg bg-elevated border border-hairline hover:border-gold transition-colors flex items-center justify-center text-muted hover:text-cream focus:outline-none focus:border-gold">
+              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.764l-4.71-3.764H2a1 1 0 01-1-1V8a1 1 0 011-1h1.673l4.71-3.764a1 1 0 011.000-.16zM14.657 5.343a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 4.657 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-1.879-.646-3.606-1.728-4.985a1 1 0 01-.015-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <!-- sliders (id="conversation-settings-button") -->
+            <button id="conversation-settings-button" title="Settings" class="w-9 h-9 rounded-lg bg-elevated border border-hairline hover:border-gold transition-colors flex items-center justify-center text-muted hover:text-cream focus:outline-none focus:border-gold">
+              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+            <!-- download (id="conversation-save-button") -->
+            <button id="conversation-save-button" title="Save conversation" class="w-9 h-9 rounded-lg bg-elevated border border-hairline hover:border-gold transition-colors flex items-center justify-center text-muted hover:text-cream focus:outline-none focus:border-gold">
+              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Messages stream container -->
+        <div class="p-5 flex flex-col gap-4 overflow-y-auto grow">
+          
+          <!-- Message 1: Natally bubble -->
+          <div class="self-start max-w-[85%] rounded-2xl rounded-tl-sm bg-elevated border border-hairline p-4">
+            <p class="font-serif text-cream text-[15px] leading-relaxed">
+              Welcome back, [Name]. Tap any placement on your chart and I'll explain it.
+            </p>
+          </div>
+
+          <!-- Message 2: Customer bubble -->
+          <div class="self-end max-w-[80%] rounded-2xl rounded-tr-sm bg-canvas border border-coral/60 p-4">
+            <p class="font-mono text-coral text-sm leading-relaxed">
+              [your question]
+            </p>
+          </div>
+
+          <!-- Message 3: Natally bubble with a gold border -->
+          <div class="self-start max-w-[92%] rounded-2xl rounded-tl-sm bg-elevated border border-gold p-4 flex flex-col gap-3.5">
+            <p class="font-serif text-cream text-[15px] leading-relaxed">
+              [Natally's reading of your chart]
+            </p>
+            
+            <!-- Three element chips: "♀ Venus", "♎ Libra", "7th House" -->
+            <div class="flex items-center gap-2 flex-wrap pt-1">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-canvas border border-gold/70 text-gold text-xs font-mono font-medium">
+                ♀ Venus
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-canvas border border-mint/70 text-mint text-xs font-mono font-medium">
+                ♎ Libra
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-canvas border border-coral/70 text-coral text-xs font-mono font-medium">
+                7th House
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom composer row -->
+      <div class="p-4 border-t border-hairline bg-panel shrink-0">
+        <form class="flex items-center gap-3" onsubmit="event.preventDefault()">
+          <!-- text input with placeholder "Ask Natally about your chart" (id="conversation-input") -->
+          <input 
+            type="text" 
+            id="conversation-input" 
+            placeholder="Ask Natally about your chart" 
+            class="grow h-11 px-4 rounded-xl bg-canvas border border-hairline text-cream placeholder-muted text-sm focus:outline-none focus:border-gold transition-colors"
+          />
+          
+          <!-- solid gold button "Send" (id="conversation-send-button") -->
+          <button 
+            type="submit" 
+            id="conversation-send-button" 
+            class="h-11 px-6 rounded-xl bg-gold hover:bg-[#b58f3c] active:bg-[#a17e30] text-canvas font-sans font-bold text-sm tracking-wide transition-colors shrink-0 focus:outline-none"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Fixed at the bottom right: version badge "v3.1.00001" in JetBrains Mono, #f2ca50 on #0b0712 -->
+  <aside class="fixed bottom-3 right-4 z-50">
+    <div class="px-2.5 py-1 rounded border border-[#2b223a] font-mono text-[11px] font-medium tracking-wider" style="color: #f2ca50; background-color: #0b0712;">
+      v3.1.00001
+    </div>
+  </aside>
+
+</body>
+</html>

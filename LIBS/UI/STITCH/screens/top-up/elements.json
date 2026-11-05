@@ -1,0 +1,44 @@
+[
+  {
+    "id": "topup-close-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "CLOSE"
+  },
+  {
+    "id": "topup-pack-list",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "US$5 — 200 Cr US$10 — 400 Cr US$25 — 1,000 Cr"
+  },
+  {
+    "id": "topup-pack-5",
+    "tag": "div",
+    "type": "",
+    "interactive": true,
+    "text": "US$5 — 200 Cr"
+  },
+  {
+    "id": "topup-pack-10",
+    "tag": "div",
+    "type": "",
+    "interactive": true,
+    "text": "US$10 — 400 Cr"
+  },
+  {
+    "id": "topup-pack-25",
+    "tag": "div",
+    "type": "",
+    "interactive": true,
+    "text": "US$25 — 1,000 Cr"
+  },
+  {
+    "id": "topup-continue-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Continue to payment · US$10"
+  }
+]

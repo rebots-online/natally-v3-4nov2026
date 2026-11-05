@@ -1,0 +1,31 @@
+{
+  "slug": "landing-desktop",
+  "title": "Landing",
+  "stitchScreenId": "5e925899faab4625b177deb87a05d9d1",
+  "htmlFileId": "a351127d91ba4e209ddae9706d47f63f",
+  "originalSha256": "d336e4d52269059d011eb34920e5d6f29445297f7f13c09ff92024edf4405ebf",
+  "frozenSha256": "413a1c7ecb3b68d6e63a5f91607766adaee2cb27367de6480072e7bff1780218",
+  "artReplaced": [
+    {
+      "what": "round nav portrait img in #landing-nav (32px circle, alt \"Natally Avatar\")",
+      "to": "../../../../../public/brand/natally-still.webp"
+    },
+    {
+      "what": "atelier scene card illustration img inside #landing-atelier (alt \"Natally in her candlelit atelier\")",
+      "to": "../../../../../public/atelier/room.webp"
+    }
+  ],
+  "glyphsFixed": 0,
+  "placeholderTextRemoved": [],
+  "idsAdded": [
+    "landing-desktop-logo-link",
+    "landing-desktop-nav-your-chart",
+    "landing-desktop-nav-explained-aloud",
+    "landing-desktop-nav-personal-readings",
+    "landing-desktop-nav-prices",
+    "landing-desktop-nav-learn-astrology"
+  ],
+  "duplicateIdsFound": [],
+  "interactiveCount": 25,
+  "idCount": 30
+}

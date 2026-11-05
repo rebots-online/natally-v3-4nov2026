@@ -1,0 +1,36 @@
+{
+  "slug": "souvenir-atelier",
+  "title": "Souvenir atelier",
+  "stitchScreenId": "63d88e49124543c0b30e9f5a349703b6",
+  "htmlFileId": "b24ea1b9848645bebea65c50c9d234cc",
+  "originalSha256": "662dfae35e2c5ce6ba857517d73dacd5477eb33288f673d740ed4d6e5717daea",
+  "frozenSha256": "f86613399023e99385d2a9fd78cc615a8263fca8943c2f25a440a0c878563eb2",
+  "artReplaced": [
+    {
+      "what": "header app icon img (40px rounded square with gold border, alt \"Natally\")",
+      "to": "../../../../../public/brand/192x192.png"
+    },
+    {
+      "what": "scene card illustration img inside #souvenir-scene (alt \"Atelier scene\")",
+      "to": "../../../../../public/atelier/room.webp"
+    },
+    {
+      "what": "conversation avatar img beside \"[Natally's saved reading]\" in #souvenir-conversation (28px rounded square, alt \"Natally\")",
+      "to": "../../../../../public/brand/192x192.png"
+    },
+    {
+      "what": "conversation avatar img beside \"[Natally's saved answer]\" in #souvenir-conversation (28px rounded square, alt \"Natally\")",
+      "to": "../../../../../public/brand/192x192.png"
+    },
+    {
+      "what": "avatar img in the keepsake reply card above #souvenir-topup-button (28px rounded square, alt \"Natally\")",
+      "to": "../../../../../public/brand/192x192.png"
+    }
+  ],
+  "glyphsFixed": 0,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 5,
+  "idCount": 8
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;600;700&family=JetBrains+Mono:wght@400;500&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { font-variant-emoji: text; }
+    body {
+      background-color: #120c1c;
+      color: #f1e8d8;
+      font-family: 'Nunito Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-fraunces {
+      font-family: 'Fraunces', serif;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .font-nunito {
+      font-family: 'Nunito Sans', sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#120c1c] text-[#f1e8d8] flex flex-col justify-between selection:bg-[#c9a24a] selection:text-[#120c1c] relative pb-12">
+  <main class="w-full max-w-[420px] mx-auto px-[20px] pt-6 flex-1 flex flex-col">
+    <!-- 1. Header row -->
+    <header class="flex items-center justify-between mb-6">
+      <h1 class="font-fraunces text-[28px] font-semibold text-[#f1e8d8] leading-tight m-0">Top Up</h1>
+      <button 
+        id="topup-close-button" 
+        type="button" 
+        class="font-cinzel uppercase text-[13px] tracking-[0.18em] text-[#f1e8d8] h-[44px] px-3 flex items-center justify-center border border-transparent hover:border-[#3a2d50] active:bg-[#1a1226] rounded transition-colors"
+      >
+        CLOSE
+      </button>
+    </header>
+
+    <!-- 2. Card: What credits do -->
+    <section class="bg-[#1a1226] border border-[#3a2d50] rounded-[16px] p-5 mb-7">
+      <h2 class="font-fraunces text-[20px] font-semibold text-[#f1e8d8] mb-3 leading-snug">What credits do</h2>
+      <ul class="space-y-3 m-0 p-0 list-none">
+        <li class="flex items-start">
+          <span class="w-[6px] h-[6px] rounded-full bg-[#c9a24a] inline-block mt-[8px] mr-3 shrink-0"></span>
+          <span class="font-nunito text-[15px] text-[#f1e8d8] leading-relaxed">Credits pay for Natally's personal spoken readings of your chart.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="w-[6px] h-[6px] rounded-full bg-[#c9a24a] inline-block mt-[8px] mr-3 shrink-0"></span>
+          <span class="font-nunito text-[15px] text-[#f1e8d8] leading-relaxed">Her lessons on any planet, sign, house or aspect are free.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="w-[6px] h-[6px] rounded-full bg-[#c9a24a] inline-block mt-[8px] mr-3 shrink-0"></span>
+          <span class="font-nunito text-[15px] text-[#f1e8d8] leading-relaxed">Your balance stays with your account on every device.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 3. Stamp: CHOOSE AN AMOUNT -->
+    <div class="font-cinzel uppercase text-[12px] tracking-[0.25em] text-[#c9a24a] font-semibold mb-3">
+      CHOOSE AN AMOUNT
+    </div>
+
+    <!-- 4. Three selectable rows -->
+    <div id="topup-pack-list" class="flex flex-col gap-3 mb-3">
+      <!-- Option 1: US$5 -->
+      <div 
+        id="topup-pack-5" 
+        role="radio"
+        aria-checked="false"
+        tabindex="0"
+        class="h-[64px] rounded-[14px] border border-[#3a2d50] bg-transparent px-4 flex items-center cursor-pointer transition-colors hover:border-[#a698b5]"
+      >
+        <div class="w-[20px] h-[20px] rounded-full border border-[#3a2d50] flex items-center justify-center mr-4 shrink-0"></div>
+        <span class="font-fraunces text-[20px] text-[#f1e8d8] font-normal leading-none">US$5 — 200 Cr</span>
+      </div>
+
+      <!-- Option 2: US$10 (Selected) -->
+      <div 
+        id="topup-pack-10" 
+        role="radio"
+        aria-checked="true"
+        tabindex="0"
+        class="h-[64px] rounded-[14px] border border-[#c9a24a] bg-[#2a1d3d] px-4 flex items-center cursor-pointer"
+      >
+        <div class="w-[20px] h-[20px] rounded-full border border-[#c9a24a] flex items-center justify-center mr-4 shrink-0">
+          <div class="w-[10px] h-[10px] rounded-full bg-[#c9a24a]"></div>
+        </div>
+        <span class="font-fraunces text-[20px] text-[#f1e8d8] font-semibold leading-none">US$10 — 400 Cr</span>
+      </div>
+
+      <!-- Option 3: US$25 -->
+      <div 
+        id="topup-pack-25" 
+        role="radio"
+        aria-checked="false"
+        tabindex="0"
+        class="h-[64px] rounded-[14px] border border-[#3a2d50] bg-transparent px-4 flex items-center cursor-pointer transition-colors hover:border-[#a698b5]"
+      >
+        <div class="w-[20px] h-[20px] rounded-full border border-[#3a2d50] flex items-center justify-center mr-4 shrink-0"></div>
+        <span class="font-fraunces text-[20px] text-[#f1e8d8] font-normal leading-none">US$25 — 1,000 Cr</span>
+      </div>
+    </div>
+
+    <!-- 5. Small muted line -->
+    <p class="font-nunito text-[13px] text-[#a698b5] m-0 mb-6">
+      You see the total before you pay.
+    </p>
+
+    <!-- 6. Bottom Continue Button -->
+    <div class="mt-auto pt-2">
+      <button 
+        id="topup-continue-button" 
+        type="button" 
+        class="w-full h-[52px] bg-[#c9a24a] text-[#120c1c] font-nunito text-[16px] font-bold rounded-[12px] flex items-center justify-center cursor-pointer transition-opacity active:opacity-90 shadow-none border-none"
+      >
+        Continue to payment · US$10
+      </button>
+    </div>
+  </main>
+
+  <!-- Fixed bottom right: version badge -->
+  <div class="fixed bottom-3 right-3 font-mono text-[11px] text-[#f2ca50] bg-[#0b0712] px-2 py-1 rounded border border-[#3a2d50]/40 tracking-wider pointer-events-none z-50">
+    v3.1.00001
+  </div>
+
+  <script>
+    // Pure interaction to allow selecting packages
+    const packs = [
+      { id: 'topup-pack-5', price: 'US$5', cr: '200 Cr' },
+      { id: 'topup-pack-10', price: 'US$10', cr: '400 Cr' },
+      { id: 'topup-pack-25', price: 'US$25', cr: '1,000 Cr' }
+    ];
+    const continueBtn = document.getElementById('topup-continue-button');
+
+    packs.forEach(pack => {
+      const el = document.getElementById(pack.id);
+      if (!el) return;
+      el.addEventListener('click', () => {
+        packs.forEach(p => {
+          const item = document.getElementById(p.id);
+          const circle = item.querySelector('div');
+          if (p.id === pack.id) {
+            item.setAttribute('aria-checked', 'true');
+            item.className = 'h-[64px] rounded-[14px] border border-[#c9a24a] bg-[#2a1d3d] px-4 flex items-center cursor-pointer';
+            circle.className = 'w-[20px] h-[20px] rounded-full border border-[#c9a24a] flex items-center justify-center mr-4 shrink-0';
+            circle.innerHTML = '<div class="w-[10px] h-[10px] rounded-full bg-[#c9a24a]"></div>';
+            item.querySelector('span').className = 'font-fraunces text-[20px] text-[#f1e8d8] font-semibold leading-none';
+          } else {
+            item.setAttribute('aria-checked', 'false');
+            item.className = 'h-[64px] rounded-[14px] border border-[#3a2d50] bg-transparent px-4 flex items-center cursor-pointer transition-colors hover:border-[#a698b5]';
+            circle.className = 'w-[20px] h-[20px] rounded-full border border-[#3a2d50] flex items-center justify-center mr-4 shrink-0';
+            circle.innerHTML = '';
+            item.querySelector('span').className = 'font-fraunces text-[20px] text-[#f1e8d8] font-normal leading-none';
+          }
+        });
+        if (continueBtn) {
+          continueBtn.textContent = 'Continue to payment · ' + pack.price;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

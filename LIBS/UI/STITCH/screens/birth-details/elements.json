@@ -1,0 +1,72 @@
+[
+  {
+    "id": "birth-back-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Back"
+  },
+  {
+    "id": "birth-form",
+    "tag": "form",
+    "type": "",
+    "interactive": false,
+    "text": "Name Natally should use Birth date 8 November 1997 Birth time I don't know my birth time Without a birth time your chart"
+  },
+  {
+    "id": "birth-name-input",
+    "tag": "input",
+    "type": "text",
+    "interactive": true,
+    "text": "Aurelia"
+  },
+  {
+    "id": "birth-day-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "8"
+  },
+  {
+    "id": "birth-month-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "November"
+  },
+  {
+    "id": "birth-year-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "1997"
+  },
+  {
+    "id": "birth-time-input",
+    "tag": "input",
+    "type": "text",
+    "interactive": true,
+    "text": "7:05 PM"
+  },
+  {
+    "id": "birth-time-unknown-checkbox",
+    "tag": "input",
+    "type": "checkbox",
+    "interactive": true,
+    "text": "I don't know my birth time"
+  },
+  {
+    "id": "birth-place-input",
+    "tag": "input",
+    "type": "text",
+    "interactive": true,
+    "text": "Toronto, Ontario, Canada"
+  },
+  {
+    "id": "birth-submit-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Calculate my chart"
+  }
+]

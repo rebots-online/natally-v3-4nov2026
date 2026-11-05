@@ -1,0 +1,100 @@
+[
+  {
+    "id": "pdf-page-group-cover",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "[GROUP NAME] [group title] ✦ ☽︎ ✦ [group introduction] [glyph] [element] [glyph] [element] [glyph] [element] [glyph] [el"
+  },
+  {
+    "id": "pdf-group-chip-1",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "[glyph] [element]"
+  },
+  {
+    "id": "pdf-group-chip-2",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "[glyph] [element]"
+  },
+  {
+    "id": "pdf-group-chip-3",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "[glyph] [element]"
+  },
+  {
+    "id": "pdf-group-chip-4",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "[glyph] [element]"
+  },
+  {
+    "id": "pdf-group-chip-5",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "[glyph] [element]"
+  },
+  {
+    "id": "pdf-group-chip-6",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "[glyph] [element]"
+  },
+  {
+    "id": "pdf-page-element-cover",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "[glyph] [element name] [element subtitle] YOU AND [ELEMENT] [your relation to this element] Hear Natally [ELEMENT] · 1 O"
+  },
+  {
+    "id": "pdf-hear-natally-element-cover",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Hear Natally"
+  },
+  {
+    "id": "pdf-page-deep-dive",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "[element name] ✦ ☽︎ ✦ [Natally's aside] ORIGINS [origins] ♀︎ Venus TRADITIONAL INTERPRETATION [traditional interpretatio"
+  },
+  {
+    "id": "pdf-chip-venus",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "♀︎ Venus"
+  },
+  {
+    "id": "pdf-chip-libra",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "♎︎ Libra"
+  },
+  {
+    "id": "pdf-chip-7th-house",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "7th House"
+  },
+  {
+    "id": "pdf-hear-natally-deep-dive",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Hear Natally"
+  }
+]

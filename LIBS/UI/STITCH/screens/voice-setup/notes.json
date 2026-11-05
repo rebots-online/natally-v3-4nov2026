@@ -1,0 +1,20 @@
+{
+  "slug": "voice-setup",
+  "title": "Voice setup",
+  "stitchScreenId": "f1caf1c402c6466191022b8a59681af3",
+  "htmlFileId": "6c6a6b3c4c714c99bb0e7ff20767653b",
+  "originalSha256": "7b3e331ccca420ff5601a84cf302aed95844f25f544bf091ac1808161d93fcdb",
+  "frozenSha256": "1f0fe7565d3a4dbcfb325f4916c67a8ac9144543b59c4575c2274d09c19bc2e1",
+  "artReplaced": [
+    {
+      "what": "96px round cameo portrait: <img alt=\"Natally\"> above the heading (Stitch stand-in hosted on lh3.googleusercontent.com)",
+      "to": "../../../../../public/brand/natally-still.webp"
+    }
+  ],
+  "glyphsFixed": 0,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 2,
+  "idCount": 7
+}

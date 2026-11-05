@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pick a Modality - Natally</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&amp;family=JetBrains+Mono:wght@500&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            canvas: "#120c1c",
+            "canvas-deep": "#0b0712",
+            panel: "#1a1226",
+            elevated: "#2a1d3d",
+            hairline: "#3a2d50",
+            cream: "#f1e8d8",
+            muted: "#a698b5",
+            gold: "#c9a24a",
+            "gold-light": "#f2ca50",
+            coral: "#f2a38c",
+            periwinkle: "#9fb4ff",
+            violet: "#b9a0e8"
+          },
+          fontFamily: {
+            fraunces: ["Fraunces", "serif"],
+            cinzel: ["Cinzel", "serif"],
+            sans: ["Nunito Sans", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    html { font-variant-emoji: text; }
+  </style>
+</head>
+<body class="bg-[#120c1c] text-[#f1e8d8] font-sans min-h-screen flex flex-col justify-between items-center antialiased selection:bg-[#2a1d3d] selection:text-[#f2ca50]">
+<!-- Main Container -->
+<main class="w-full max-w-[430px] mx-auto px-4 pt-10 pb-16 flex flex-col items-center flex-grow justify-center text-center">
+<!-- 1. App Icon -->
+<div class="w-[72px] h-[72px] rounded-[17px] border border-[#c9a24a] overflow-hidden bg-[#1a1226] mb-5 flex-shrink-0" id="natally-app-icon">
+<img alt="Natally robot astrologer" class="w-full h-full object-cover" src="../../../../../public/brand/192x192.png"/>
+</div>
+<!-- 2. Eyebrow Brand Stamp -->
+<p class="font-cinzel font-bold text-[#c9a24a] tracking-[0.25em] text-xs uppercase mb-2">
+      READINGS BY NATALLY
+    </p>
+<!-- 3. Heading -->
+<h1 class="font-fraunces text-[34px] leading-tight text-[#f1e8d8] tracking-tight mb-2 font-normal">
+      What shall we read tonight?
+    </h1>
+<!-- 4. Subtitle -->
+<p class="text-[#a698b5] text-sm mb-7 font-normal">
+      Choose a reading.
+    </p>
+<!-- 5. Vertical list of modality cards -->
+<div class="flex flex-col gap-3.5 w-full mb-3 text-left" id="modality-list">
+<!-- Card 1: Natal chart reading (Selected) -->
+<div class="bg-[#1a1226] border border-[#c9a24a] rounded-[16px] min-h-[88px] p-4 flex items-center justify-between transition-colors" id="modality-card-natal">
+<!-- Icon Circle -->
+<div class="w-12 h-12 rounded-full bg-[#2a1d3d] flex items-center justify-center flex-shrink-0 text-[#f1e8d8]">
+<svg class="w-6 h-6 stroke-current" fill="none" stroke-width="1.5" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9.5"></circle>
+<circle cx="12" cy="12" r="5"></circle>
+<path d="M12 2.5v19M2.5 12h19M5.28 5.28l13.44 13.44M5.28 18.72L18.72 5.28" stroke-linecap="round"></path>
+</svg>
+</div>
+<!-- Title -->
+<span class="font-fraunces text-[20px] text-[#f1e8d8] flex-1 px-4 leading-snug">
+          Natal chart reading
+        </span>
+<!-- Right Action Button -->
+<button class="bg-[#c9a24a] hover:bg-[#f2ca50] text-[#120c1c] font-semibold px-4 py-2 rounded-lg text-sm transition-colors duration-150 flex-shrink-0 active:scale-95" id="modality-natal-begin" type="button">
+          Begin
+        </button>
+</div>
+<!-- Card 2: Tarot (Locked Add-on) -->
+<div class="bg-[#1a1226] border border-[#3a2d50] rounded-[16px] min-h-[88px] p-4 flex items-center justify-between opacity-70 cursor-not-allowed" id="modality-card-tarot">
+<!-- Icon Circle -->
+<div class="w-12 h-12 rounded-full bg-[#2a1d3d] flex items-center justify-center flex-shrink-0 text-[#f1e8d8]">
+<svg class="w-6 h-6 stroke-current" fill="none" stroke-width="1.5" viewbox="0 0 24 24">
+<rect height="18" rx="2" width="12" x="6" y="3"></rect>
+<path d="M12 8.5v7M8.5 12h7M9.8 9.8l4.4 4.4M9.8 14.2l4.4-4.4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<!-- Title -->
+<span class="font-fraunces text-[20px] text-[#f1e8d8] flex-1 px-4 leading-snug">
+          Tarot
+        </span>
+<!-- Right Side: Lock + Add-on Label -->
+<div class="flex flex-col items-center justify-center gap-1 flex-shrink-0 px-1">
+<svg class="w-4 h-4 stroke-[#a698b5]" fill="none" stroke-width="1.75" viewbox="0 0 24 24">
+<rect height="10" rx="2" width="14" x="5" y="11"></rect>
+<path d="M8 11V7a4 4 0 0 1 8 0v4" stroke-linecap="round"></path>
+</svg>
+<span class="font-mono text-xs text-[#a698b5] leading-none">Add-on</span>
+</div>
+</div>
+<!-- Card 3: I Ching (Locked Add-on) -->
+<div class="bg-[#1a1226] border border-[#3a2d50] rounded-[16px] min-h-[88px] p-4 flex items-center justify-between opacity-70 cursor-not-allowed" id="modality-card-iching">
+<!-- Icon Circle -->
+<div class="w-12 h-12 rounded-full bg-[#2a1d3d] flex items-center justify-center flex-shrink-0 text-[#f1e8d8]">
+<svg class="w-6 h-6 stroke-current" fill="none" stroke-linecap="round" stroke-width="1.75" viewbox="0 0 24 24">
+<!-- Line 1: solid -->
+<path d="M5 4.5h14"></path>
+<!-- Line 2: broken -->
+<path d="M5 7.5h5.5M13.5 7.5H19"></path>
+<!-- Line 3: solid -->
+<path d="M5 10.5h14"></path>
+<!-- Line 4: broken -->
+<path d="M5 13.5h5.5M13.5 13.5H19"></path>
+<!-- Line 5: broken -->
+<path d="M5 16.5h5.5M13.5 16.5H19"></path>
+<!-- Line 6: solid -->
+<path d="M5 19.5h14"></path>
+</svg>
+</div>
+<!-- Title -->
+<span class="font-fraunces text-[20px] text-[#f1e8d8] flex-1 px-4 leading-snug">
+          I Ching
+        </span>
+<!-- Right Side: Lock + Add-on Label -->
+<div class="flex flex-col items-center justify-center gap-1 flex-shrink-0 px-1">
+<svg class="w-4 h-4 stroke-[#a698b5]" fill="none" stroke-width="1.75" viewbox="0 0 24 24">
+<rect height="10" rx="2" width="14" x="5" y="11"></rect>
+<path d="M8 11V7a4 4 0 0 1 8 0v4" stroke-linecap="round"></path>
+</svg>
+<span class="font-mono text-xs text-[#a698b5] leading-none">Add-on</span>
+</div>
+</div>
+</div>
+<!-- 6. Small Muted Disclaimer Line -->
+<p class="text-xs text-[#a698b5] text-center mb-8">
+      Add-on readings are bought separately.
+    </p>
+<!-- 7. Bottom Ghost Link -->
+<div class="mt-auto">
+<a class="text-[#a698b5] hover:text-[#f1e8d8] text-sm underline underline-offset-4 transition-colors" href="#signin" id="modality-signin-link">
+        Sign in
+      </a>
+</div>
+</main>
+<!-- Fixed Bottom Right Version Badge -->
+<aside class="fixed bottom-3 right-3 font-mono text-[11px] text-[#f2ca50] bg-[#0b0712] border border-[#3a2d50] px-2 py-1 rounded select-none z-50 pointer-events-none" id="version-badge">
+    v3.1.00001
+  </aside>
+</body></html>

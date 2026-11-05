@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natally — Landing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;500;600&family=JetBrains+Mono:wght@400;500&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#120c1c',
+            panel: '#1a1226',
+            elevated: '#2a1d3d',
+            hairline: '#3a2d50',
+            cream: '#f1e8d8',
+            muted: '#a698b5',
+            gold: '#c9a24a',
+            'gold-hover': '#b58f3b',
+            violet: '#b9a0e8',
+          },
+          fontFamily: {
+            fraunces: ['Fraunces', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            nunito: ['"Nunito Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #120c1c;
+      color: #f1e8d8;
+      font-family: 'Nunito Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    /* Enforce no gradients and no glows as specified */
+    *, *::before, *::after {
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-cream selection:bg-elevated selection:text-cream min-h-screen">
+
+  <!-- TOP NAV -->
+  <header id="landing-nav" class="sticky top-0 z-40 w-full h-[64px] bg-canvas border-b border-hairline">
+    <div class="max-w-[1160px] h-full mx-auto px-6 flex items-center justify-between">
+      <!-- Left: Logo & Wordmark -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="https://lh3.googleusercontent.com/aida/AEtjO1XuRNRzb7RUbcZkNBdxegbvWLatcYtMoXmmdxFBllPbOrMGg_R17ygNjW_POfEESv4N7Zx42bh-j5dMKiPcoPO9NS7RtuQGuPCilnsPfp-H3s4e9xix6r4aHVWaQn-9xs5_6N5RVElv8hugdQTXPt1Po0WrZdSCO5HMYH2BWsWOc5vBxbXTYazP0Dou8A8dDVvnyKKeiN9iIz-1ti3mzsTZW9p0PLIOnV6uSzVVWz4yueLhPpMCa4YRZOs" alt="Natally Avatar" class="w-8 h-8 rounded-full border border-hairline object-cover" />
+        <span class="font-cinzel text-lg tracking-widest text-cream uppercase font-semibold">Natally</span>
+      </a>
+
+      <!-- Centre: Nav Links -->
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="#landing-atelier" class="text-sm font-medium text-cream hover:text-gold transition-colors">Your chart</a>
+        <a href="#landing-atelier" class="text-sm font-medium text-cream hover:text-gold transition-colors">Your chart, explained aloud</a>
+        <a href="#landing-prices" class="text-sm font-medium text-cream hover:text-gold transition-colors">Personal readings</a>
+        <a href="#landing-prices" class="text-sm font-medium text-cream hover:text-gold transition-colors">Prices</a>
+        <a href="#landing-install" class="text-sm font-medium text-cream hover:text-gold transition-colors">Learn astrology</a>
+      </nav>
+
+      <!-- Right: Sign In Button -->
+      <div>
+        <button id="landing-signin-button" type="button" class="px-5 py-2 rounded-xl bg-panel border border-hairline text-sm font-medium text-cream hover:border-gold hover:text-gold transition-colors">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="w-full">
+
+    <!-- HERO AREA: TWO COLUMNS (max width 1320px) -->
+    <div class="max-w-[1320px] mx-auto px-6 pt-12 pb-16">
+      <div class="flex flex-col lg:flex-row items-start justify-between gap-12">
+
+        <!-- LEFT COLUMN (about 42 percent) -->
+        <div class="w-full lg:w-[42%] flex flex-col">
+
+          <!-- Section 1 -->
+          <section class="pb-16">
+            <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-violet mb-3">
+              NATAL ASTROLOGY, READ ALOUD
+            </div>
+            <h1 class="font-fraunces text-[54px] font-normal leading-[1.1] text-cream mb-6">
+              Your birth chart, read aloud by Natally.
+            </h1>
+            <p class="text-base leading-relaxed text-muted mb-8">
+              She calculates your chart, speaks your reading and lights up each placement on the wheel as she talks about it. Exploring the room and your chart is free. Spoken readings are prepaid.
+            </p>
+
+            <!-- Offer card -->
+            <div class="bg-panel border border-hairline rounded-[16px] p-6 mb-5">
+              <div class="flex items-baseline justify-between mb-5 pb-4 border-b border-hairline">
+                <span class="font-fraunces text-2xl font-normal text-cream">Souvenir reading</span>
+                <span class="font-mono text-xl font-bold text-cream">US$30</span>
+              </div>
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>Your assembled natal chart and personal reading</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>A keepsake PDF with a chapter for every planet, sign, aspect and house in your chart</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>Your own atelier, frozen in time, to revisit and replay</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>Both links in your purchase history and by email</span>
+                </li>
+              </ul>
+              <button id="landing-cta-hero" type="button" class="w-full py-3.5 px-6 rounded-xl bg-gold hover:bg-gold-hover text-canvas font-semibold text-sm tracking-wide uppercase transition-colors text-center">
+                Start my reading now!
+              </button>
+              <div class="text-xs text-muted text-center mt-3">
+                One-time purchase. You see the total before you pay.
+              </div>
+            </div>
+
+            <div>
+              <a href="#landing-atelier" id="landing-explore-free-link" class="text-sm underline text-muted hover:text-cream transition-colors">
+                Explore the room free first
+              </a>
+            </div>
+          </section>
+
+          <hr class="border-t border-hairline w-full mb-16" />
+
+          <!-- Section 2 -->
+          <section class="pb-16">
+            <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-violet mb-3">
+              CALCULATED, NOT GUESSED
+            </div>
+            <h2 class="font-fraunces text-[38px] font-normal leading-[1.2] text-cream mb-5">
+              Every placement comes from the ephemeris.
+            </h2>
+            <p class="text-base leading-relaxed text-muted mb-8">
+              Natally's reading starts from your actual birth date, place and time, calculated with Swiss Ephemeris. She talks about what is in your chart, and says plainly what isn't known.
+            </p>
+
+            <div class="space-y-6 mb-8">
+              <div class="border-l-2 border-hairline pl-4">
+                <div class="font-bold text-cream text-base mb-1">Placidus houses when your birth time is known</div>
+                <div class="text-sm text-muted">Ascendant at nine o'clock, with MC, DSC and IC marked.</div>
+              </div>
+              <div class="border-l-2 border-hairline pl-4">
+                <div class="font-bold text-cream text-base mb-1">Honest about an unknown birth time</div>
+                <div class="text-sm text-muted">Houses and angles are left out and the chart is labelled Whole Sign, rather than invented.</div>
+              </div>
+              <div class="border-l-2 border-hairline pl-4">
+                <div class="font-bold text-cream text-base mb-1">Same numbers everywhere</div>
+                <div class="text-sm text-muted">Degrees and minutes match between the wheel, tables and her reading.</div>
+              </div>
+            </div>
+
+            <!-- Compact offer card -->
+            <div class="bg-panel border border-hairline rounded-[16px] p-5">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-fraunces text-xl font-normal text-cream">Souvenir reading</span>
+                <span class="font-mono text-lg font-bold text-cream">US$30</span>
+              </div>
+              <button id="landing-cta-calculated" type="button" class="w-full py-3 px-6 rounded-xl bg-gold hover:bg-gold-hover text-canvas font-semibold text-sm tracking-wide uppercase transition-colors text-center">
+                Start my reading now!
+              </button>
+            </div>
+          </section>
+
+          <hr class="border-t border-hairline w-full mb-16" />
+
+          <!-- Section 3 -->
+          <section class="pb-16">
+            <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-violet mb-3">
+              SHE SHOWS YOU WHAT SHE MEANS
+            </div>
+            <h2 class="font-fraunces text-[38px] font-normal leading-[1.2] text-cream mb-5">
+              As she speaks, the wheel follows her.
+            </h2>
+            <p class="text-base leading-relaxed text-muted mb-4">
+              Follow her reading on your chart: each planet or connection lights up as she talks about it. Listen along, or read at your own pace.
+            </p>
+            <p class="text-base leading-relaxed text-cream mb-8">
+              Natally uses the language of astrology and explains unfamiliar terms as they come up.
+            </p>
+
+            <!-- Compact offer card -->
+            <div class="bg-panel border border-hairline rounded-[16px] p-5">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-fraunces text-xl font-normal text-cream">Souvenir reading</span>
+                <span class="font-mono text-lg font-bold text-cream">US$30</span>
+              </div>
+              <button id="landing-cta-wheel" type="button" class="w-full py-3 px-6 rounded-xl bg-gold hover:bg-gold-hover text-canvas font-semibold text-sm tracking-wide uppercase transition-colors text-center">
+                Start my reading now!
+              </button>
+            </div>
+          </section>
+
+          <hr class="border-t border-hairline w-full mb-16" />
+
+          <!-- Section 4 -->
+          <section class="pb-8">
+            <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-violet mb-3">
+              KEEP ASKING
+            </div>
+            <h2 class="font-fraunces text-[38px] font-normal leading-[1.2] text-cream mb-5">
+              Explore your life with Natally
+            </h2>
+            <p class="text-base leading-relaxed text-muted mb-8">
+              Explore your chart, relationships and what is happening in your life. Personal readings use purchased credits so Natally can think through your situation and connect the pieces in your chart.
+            </p>
+
+            <!-- Offer card -->
+            <div class="bg-panel border border-hairline rounded-[16px] p-5">
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-hairline">
+                <span class="font-fraunces text-xl font-normal text-cream">Exploration credits</span>
+                <span class="font-mono text-base font-bold text-cream">from US$5</span>
+              </div>
+              <ul class="space-y-3 mb-5">
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>Credits pay for Natally's personal spoken readings.</span>
+                </li>
+              </ul>
+              <button id="landing-cta-credits" type="button" class="w-full py-3 px-6 rounded-xl bg-gold hover:bg-gold-hover text-canvas font-semibold text-sm tracking-wide uppercase transition-colors text-center">
+                Get reading credits
+              </button>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN (about 58 percent, sticky) -->
+        <div id="landing-atelier" class="w-full lg:w-[58%] lg:sticky lg:top-[88px] flex flex-col">
+
+          <!-- Atelier Scene Card (aspect 1586 by 992, 20px radius, hairline border) -->
+          <div class="relative w-full aspect-[1586/992] rounded-[20px] border border-hairline overflow-hidden bg-panel">
+            <!-- Background illustration of Natally in Atelier -->
+            <img src="https://lh3.googleusercontent.com/aida/AEtjO1WUWFrQLQ9N3gYxwDV2aCOfLp2RXC8ylQ8GZ072sVHYmxJR1N7166lCAszszj7NSvvPufi6pk26m4N4ZRG_ZQ1YiGB6V9l8B2AloqugOtpel1tBY74EJ7oXgO9i7ixpgzpkr77_-J0BGrDhOCmpQM_FTZQY7HIxzRzk3CE7j1Ha3KTRxf8lemAT8NpvhXuFpCu-0DOPp1VVNrKWB1_ZuwgK4m19dr8OrIIdG0SFpxXiwNEp5nPJ3pMcn6Q" alt="Natally in her candlelit atelier" class="w-full h-full object-cover select-none" />
+
+            <!-- Overlay Top Right Chip: "Room sounds on" -->
+            <div class="absolute top-4 right-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#120c1c]/90 border border-hairline text-xs font-medium text-cream backdrop-blur-sm">
+              <span class="w-2 h-2 rounded-full bg-gold"></span>
+              <span>Room sounds on</span>
+            </div>
+
+            <!-- Overlay Bottom Left Inset Panel: Natal Chart Wheel -->
+            <div id="landing-inset-handle" class="absolute bottom-4 left-4 z-20 w-[170px] sm:w-[200px] aspect-[4/5] rounded-xl bg-[#0b0712]/95 border border-gold p-2.5 flex flex-col justify-between">
+              <div class="flex items-center justify-between text-[11px] font-mono text-gold pb-1 border-b border-hairline/60">
+                <span>⠇ Move chart</span>
+                <span class="text-[9px] text-muted">Aurelia</span>
+              </div>
+              <!-- Chart Wheel Graphic -->
+              <div class="relative w-full flex-1 flex items-center justify-center p-1">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <circle cx="50" cy="50" r="46" fill="none" stroke="#3a2d50" stroke-width="1" />
+                  <circle cx="50" cy="50" r="36" fill="none" stroke="#2a1d3d" stroke-width="1" />
+                  <circle cx="50" cy="50" r="24" fill="none" stroke="#3a2d50" stroke-width="0.8" />
+                  <!-- House divisions & axes -->
+                  <line x1="4" y1="50" x2="96" y2="50" stroke="#c9a24a" stroke-width="1" stroke-dasharray="2,2" />
+                  <line x1="50" y1="4" x2="50" y2="96" stroke="#c9a24a" stroke-width="1" stroke-dasharray="2,2" />
+                  <line x1="18" y1="18" x2="82" y2="82" stroke="#3a2d50" stroke-width="0.8" />
+                  <line x1="18" y1="82" x2="82" y2="18" stroke="#3a2d50" stroke-width="0.8" />
+                  <!-- Aspect geometric lines -->
+                  <polygon points="50,14 78,66 22,66" fill="none" stroke="#b9a0e8" stroke-width="0.9" />
+                  <polygon points="50,86 22,34 78,34" fill="none" stroke="#c9a24a" stroke-width="0.7" />
+                  <!-- Center dot & planet markers -->
+                  <circle cx="50" cy="50" r="2.5" fill="#f1e8d8" />
+                  <circle cx="50" cy="14" r="2" fill="#c9a24a" />
+                  <circle cx="78" cy="66" r="2" fill="#b9a0e8" />
+                  <circle cx="22" cy="66" r="2" fill="#f1e8d8" />
+                  <circle cx="36" cy="24" r="1.5" fill="#c9a24a" />
+                  <circle cx="70" cy="30" r="1.5" fill="#f1e8d8" />
+                </svg>
+              </div>
+              <div class="text-[9px] text-center font-mono text-muted tracking-wide pt-1">
+                Placidus · Toronto
+              </div>
+            </div>
+
+            <!-- Subtle caption badge bottom-center -->
+            <div class="absolute bottom-3 right-4 z-10 px-3 py-1 rounded-md bg-[#120c1c]/80 border border-hairline/60 text-[11px] text-muted font-mono">
+              Chart highlights follow Natally's reading
+            </div>
+          </div>
+
+          <!-- Controls under card -->
+          <div class="mt-4 flex flex-wrap items-center justify-between gap-3 bg-panel border border-hairline rounded-xl px-4 py-3">
+            <div class="flex items-center gap-3">
+              <button id="landing-sound-toggle" type="button" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-elevated border border-hairline hover:border-gold text-xs font-medium text-cream transition-colors">
+                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                </svg>
+                <span>Sound On</span>
+              </button>
+              <span class="text-xs text-muted">Explore a placement</span>
+            </div>
+
+            <div class="flex-1 min-w-[220px]">
+              <select id="landing-element-select" class="w-full bg-elevated border border-hairline rounded-lg px-3 py-1.5 text-xs text-cream focus:outline-none focus:border-gold cursor-pointer">
+                <option value="">Choose a planet, sign, house or aspect</option>
+                <option value="sun">Sun in Scorpio (16°)</option>
+                <option value="moon">Moon in Aquarius (4°)</option>
+                <option value="mercury">Mercury in Sagittarius (2°)</option>
+                <option value="venus">Venus in Libra (28°)</option>
+                <option value="mars">Mars in Sagittarius (14°)</option>
+                <option value="ascendant">Ascendant in Taurus (9°)</option>
+                <option value="midheaven">Midheaven in Capricorn (26°)</option>
+                <option value="seventh">7th House in Scorpio</option>
+                <option value="trine">Sun Trine Jupiter</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Example chart note and secondary button -->
+          <div class="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-1">
+            <p class="text-xs text-muted leading-relaxed max-w-[360px]">
+              Example chart — Aurelia, an anonymous example born 8 Nov 1997, 7:05 PM, Toronto. It is not your chart.
+            </p>
+            <button id="landing-create-chart-button" type="button" class="shrink-0 flex items-center gap-2 px-4 py-2 rounded-xl bg-panel border border-hairline hover:border-gold text-xs font-semibold text-cream transition-colors">
+              <span>Create your natal chart</span>
+              <svg class="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Sign in helper note -->
+          <div class="mt-2 text-xs text-muted px-1">
+            Sign in to explore your own calculated chart.
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FULL-WIDTH SECTIONS (content max width 1160px) -->
+
+    <!-- Section 5: Prices -->
+    <section id="landing-prices" class="w-full border-t border-hairline py-20 bg-canvas">
+      <div class="max-w-[1160px] mx-auto px-6">
+        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-violet mb-3">
+          WHAT YOU CAN BUY TODAY
+        </div>
+        <h2 class="font-fraunces text-[42px] font-normal leading-[1.2] text-cream mb-12">
+          Two purchases, one experience.
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+          <!-- Card A: Souvenir reading -->
+          <div class="bg-panel border border-hairline rounded-[20px] p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between mb-6 pb-4 border-b border-hairline">
+                <h3 class="font-fraunces text-2xl font-normal text-cream">Souvenir reading</h3>
+                <span class="font-mono text-2xl font-bold text-cream">US$30</span>
+              </div>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>Your assembled natal chart and personal reading</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>A keepsake PDF with a chapter for every planet, sign, aspect and house</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>Your own atelier, frozen in time</span>
+                </li>
+              </ul>
+            </div>
+            <button id="landing-buy-souvenir" type="button" class="w-full py-3.5 px-6 rounded-xl bg-gold hover:bg-gold-hover text-canvas font-semibold text-sm tracking-wide uppercase transition-colors text-center">
+              Buy souvenir reading
+            </button>
+          </div>
+
+          <!-- Card B: Exploration credits -->
+          <div class="bg-panel border border-hairline rounded-[20px] p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between mb-6 pb-4 border-b border-hairline">
+                <h3 class="font-fraunces text-2xl font-normal text-cream">Exploration credits</h3>
+                <span class="font-mono text-lg font-bold text-cream">US$5 · US$10 · US$25</span>
+              </div>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>200, 400 or 1,000 credits</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>Credits pay for personal spoken readings</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-cream/90 leading-snug">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet mt-1.5 shrink-0"></span>
+                  <span>Add the souvenir reading any time</span>
+                </li>
+              </ul>
+            </div>
+            <button id="landing-buy-credits" type="button" class="w-full py-3.5 px-6 rounded-xl bg-panel border border-hairline hover:border-gold text-cream font-semibold text-sm tracking-wide uppercase transition-colors text-center">
+              Get reading credits
+            </button>
+          </div>
+        </div>
+
+        <div class="text-xs text-muted">
+          Checkout confirms your total before you pay.
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Steps / How it works -->
+    <section class="w-full border-t border-hairline py-20 bg-canvas">
+      <div class="max-w-[1160px] mx-auto px-6">
+        <h2 class="font-fraunces text-[38px] font-normal leading-[1.2] text-cream mb-14">
+          From this page to her first answer
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Col 01 -->
+          <div class="flex flex-col">
+            <span class="font-fraunces text-3xl text-violet mb-3 font-normal">01</span>
+            <h4 class="font-bold text-cream text-base mb-2">Pick on any section</h4>
+            <p class="text-sm text-muted leading-relaxed">
+              The button you press decides the product. You won't be asked to choose again.
+            </p>
+          </div>
+
+          <!-- Col 02 -->
+          <div class="flex flex-col">
+            <span class="font-fraunces text-3xl text-violet mb-3 font-normal">02</span>
+            <h4 class="font-bold text-cream text-base mb-2">Sign in</h4>
+            <p class="text-sm text-muted leading-relaxed">
+              Your purchase belongs to your Natally account on every device.
+            </p>
+          </div>
+
+          <!-- Col 03 -->
+          <div class="flex flex-col">
+            <span class="font-fraunces text-3xl text-violet mb-3 font-normal">03</span>
+            <h4 class="font-bold text-cream text-base mb-2">Pay</h4>
+            <p class="text-sm text-muted leading-relaxed">
+              Review your total and confirm your purchase.
+            </p>
+          </div>
+
+          <!-- Col 04 -->
+          <div class="flex flex-col">
+            <span class="font-fraunces text-3xl text-violet mb-3 font-normal">04</span>
+            <h4 class="font-bold text-cream text-base mb-2">Credits ready first</h4>
+            <p class="text-sm text-muted leading-relaxed">
+              Your credits are added before your first question is sent.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-sm text-muted">
+          <span>Already paid?</span>
+          <a href="#" id="landing-restore-link" class="underline ml-1 text-muted hover:text-cream transition-colors">
+            Restore your existing access
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Install Natally -->
+    <section id="landing-install" class="w-full border-t border-hairline py-20 bg-canvas">
+      <div class="max-w-[1160px] mx-auto px-6">
+        <h2 class="font-fraunces text-[38px] font-normal leading-[1.2] text-cream mb-4">
+          Install Natally
+        </h2>
+        <p class="text-base leading-relaxed text-muted max-w-2xl mb-8">
+          On Android, get the Natally app from Google Play: it runs smoother and sounds better. On Windows and Linux, install the desktop app.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <button id="landing-install-play" type="button" class="px-6 py-3.5 rounded-xl border border-gold bg-transparent text-cream hover:bg-gold/10 text-sm font-semibold transition-colors">
+            Get it on Google Play
+          </button>
+          <button id="landing-install-windows" type="button" class="px-6 py-3.5 rounded-xl bg-panel border border-hairline hover:border-gold text-cream text-sm font-medium transition-colors">
+            Download for Windows
+          </button>
+          <button id="landing-install-linux" type="button" class="px-6 py-3.5 rounded-xl bg-panel border border-hairline hover:border-gold text-cream text-sm font-medium transition-colors">
+            Download for Linux
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Explore the language of your chart -->
+    <section class="w-full border-t border-hairline py-20 bg-canvas">
+      <div class="max-w-[1160px] mx-auto px-6">
+        <h2 class="font-fraunces text-[38px] font-normal leading-[1.2] text-cream mb-4">
+          Explore the language of your chart
+        </h2>
+        <p class="text-base leading-relaxed text-muted max-w-3xl mb-8">
+          Choose a planet, house, sign, or aspect in your calculated chart to hear Natally explain its meaning in astrology. Her general explanations are available as text and spoken lessons, with the placement highlighted as you explore.
+        </p>
+        <div>
+          <a href="#landing-atelier" id="landing-explore-link" class="text-base underline text-cream hover:text-gold transition-colors">
+            Explore your chart with Natally
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full border-t border-hairline py-8 bg-canvas">
+    <div class="max-w-[1160px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-xs text-muted">
+        Natally · natal astrology companion
+      </div>
+      <div class="flex items-center gap-6 text-xs text-muted">
+        <a href="#" id="landing-terms-link" class="underline hover:text-cream transition-colors">Terms</a>
+        <a href="#" id="landing-privacy-link" class="underline hover:text-cream transition-colors">Privacy</a>
+        <a href="#" id="landing-contact-link" class="underline hover:text-cream transition-colors">Contact Roche Media Services</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FIXED VERSION BADGE -->
+  <div class="fixed bottom-4 right-4 z-50 pointer-events-none">
+    <span class="px-2.5 py-1 rounded bg-[#0b0712] border border-hairline/80 font-mono text-[11px] text-[#f2ca50] tracking-wider select-none">
+      v3.1.00001
+    </span>
+  </div>
+
+</body>
+</html>

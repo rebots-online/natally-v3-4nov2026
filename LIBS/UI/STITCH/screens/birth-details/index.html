@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birth details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;600;700&family=JetBrains+Mono:wght@400;500&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { font-variant-emoji: text; }
+    body {
+      background-color: #120c1c;
+      color: #f1e8d8;
+      font-family: 'Nunito Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-fraunces { font-family: 'Fraunces', serif; }
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .font-body { font-family: 'Nunito Sans', sans-serif; }
+    
+    /* Custom select arrow styling */
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a698b5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 16px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #c9a24a;
+    }
+
+    /* Custom checkbox styling */
+    .custom-checkbox {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border: 1px solid #3a2d50;
+      border-radius: 6px;
+      background-color: #1a1226;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .custom-checkbox:checked {
+      background-color: #2a1d3d;
+      border-color: #c9a24a;
+    }
+    .custom-checkbox:checked::after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      border: solid #c9a24a;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      top: 3px;
+    }
+  </style>
+</head>
+<body class="bg-[#120c1c] text-[#f1e8d8] min-h-screen relative flex flex-col justify-between selection:bg-[#c9a24a] selection:text-[#120c1c]">
+  <!-- Main Container with 16px side margins -->
+  <main class="w-full max-w-[430px] mx-auto px-4 pt-5 pb-16 flex flex-col">
+    
+    <!-- 1. Ghost link "Back" at the top left -->
+    <div class="w-full flex items-center justify-start mb-6">
+      <a href="#" id="birth-back-link" class="inline-flex items-center gap-1.5 text-[#a698b5] hover:text-[#f1e8d8] font-body text-sm font-semibold transition-colors duration-150">
+        <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        Back
+      </a>
+    </div>
+
+    <!-- 2. 96px circular cameo with 1px gold border showing Natally holding crystal ball -->
+    <div class="flex justify-center mb-6">
+      <div class="w-[96px] h-[96px] rounded-full border border-[#c9a24a] overflow-hidden bg-[#1a1226] flex items-center justify-center shrink-0">
+        <img src="../../../../../public/brand/natally-still.webp" alt="Natally holding violet crystal ball" class="w-full h-full object-cover object-center" style="transform: scale(1.6) translateY(2px);" />
+      </div>
+    </div>
+
+    <!-- 3. Heading, Fraunces 28px, cream -->
+    <h1 class="font-fraunces text-[28px] leading-[1.2] text-[#f1e8d8] font-bold text-center mb-2">
+      When and where were you born?
+    </h1>
+
+    <!-- 4. One muted line -->
+    <p class="font-body text-[14px] text-[#a698b5] text-center mb-7">
+      Natally calculates your chart from this.
+    </p>
+
+    <!-- 5. Form -->
+    <form id="birth-form" class="flex flex-col gap-5 w-full" onsubmit="event.preventDefault();">
+      
+      <!-- Field: Name -->
+      <div class="flex flex-col">
+        <label for="birth-name-input" class="font-mono text-[13px] text-[#a698b5] mb-2">
+          Name Natally should use
+        </label>
+        <input 
+          type="text" 
+          id="birth-name-input" 
+          value="Aurelia" 
+          class="h-[48px] bg-[#1a1226] border border-[#3a2d50] rounded-[12px] px-4 text-[#f1e8d8] font-body text-[15px] transition-colors"
+        />
+      </div>
+
+      <!-- Field: Birth date -->
+      <div class="flex flex-col">
+        <label class="font-mono text-[13px] text-[#a698b5] mb-2">
+          Birth date
+        </label>
+        <div class="grid grid-cols-12 gap-2">
+          <!-- Day -->
+          <div class="col-span-3">
+            <select 
+              id="birth-day-select" 
+              class="w-full h-[48px] bg-[#1a1226] border border-[#3a2d50] rounded-[12px] px-3 text-[#f1e8d8] font-body text-[15px] cursor-pointer"
+            >
+              <option value="8" selected>8</option>
+              <!-- other days -->
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+            </select>
+          </div>
+          <!-- Month (names, never numbers) -->
+          <div class="col-span-5">
+            <select 
+              id="birth-month-select" 
+              class="w-full h-[48px] bg-[#1a1226] border border-[#3a2d50] rounded-[12px] px-3 text-[#f1e8d8] font-body text-[15px] cursor-pointer"
+            >
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November" selected>November</option>
+              <option value="December">December</option>
+            </select>
+          </div>
+          <!-- Year -->
+          <div class="col-span-4">
+            <select 
+              id="birth-year-select" 
+              class="w-full h-[48px] bg-[#1a1226] border border-[#3a2d50] rounded-[12px] px-3 text-[#f1e8d8] font-body text-[15px] cursor-pointer"
+            >
+              <option value="1997" selected>1997</option>
+              <option value="1995">1995</option>
+              <option value="1996">1996</option>
+              <option value="1998">1998</option>
+              <option value="1999">1999</option>
+              <option value="2000">2000</option>
+              <option value="2001">2001</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Field: Birth time -->
+      <div class="flex flex-col">
+        <label for="birth-time-input" class="font-mono text-[13px] text-[#a698b5] mb-2">
+          Birth time
+        </label>
+        <input 
+          type="text" 
+          id="birth-time-input" 
+          value="7:05 PM" 
+          class="h-[48px] bg-[#1a1226] border border-[#3a2d50] rounded-[12px] px-4 text-[#f1e8d8] font-body text-[15px] mb-3 transition-colors"
+        />
+        
+        <!-- Checkbox row with 22px box -->
+        <div class="flex items-center gap-2.5 mb-1.5">
+          <input 
+            type="checkbox" 
+            id="birth-time-unknown-checkbox" 
+            class="custom-checkbox"
+          />
+          <label for="birth-time-unknown-checkbox" class="font-body text-[14px] text-[#f1e8d8] cursor-pointer select-none">
+            I don't know my birth time
+          </label>
+        </div>
+
+        <!-- Small muted note line -->
+        <p class="font-body text-[12px] text-[#a698b5] leading-snug">
+          Without a birth time your chart uses Whole Sign houses.
+        </p>
+      </div>
+
+      <!-- Field: Birth place -->
+      <div class="flex flex-col">
+        <label for="birth-place-input" class="font-mono text-[13px] text-[#a698b5] mb-2">
+          Birth place
+        </label>
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-3.5 text-[#a698b5] text-[18px] pointer-events-none">
+            location_on
+          </span>
+          <input 
+            type="text" 
+            id="birth-place-input" 
+            value="Toronto, Ontario, Canada" 
+            class="w-full h-[48px] bg-[#1a1226] border border-[#3a2d50] rounded-[12px] pl-10 pr-4 text-[#f1e8d8] font-body text-[15px] transition-colors"
+          />
+        </div>
+      </div>
+
+      <!-- 6. Full-width solid gold button, 52px high -->
+      <div class="pt-2">
+        <button 
+          type="submit" 
+          id="birth-submit-button" 
+          class="w-full h-[52px] bg-[#c9a24a] hover:bg-[#d8b056] active:scale-[0.99] text-[#120c1c] font-cinzel font-bold text-[15px] tracking-wide rounded-[12px] flex items-center justify-center transition-all duration-150 cursor-pointer shadow-none"
+        >
+          Calculate my chart
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- Fixed bottom right: version badge in JetBrains Mono, #f2ca50 on #0b0712 -->
+  <div class="fixed bottom-2 right-2 z-50 bg-[#0b0712] border border-[#3a2d50]/60 rounded px-1.5 py-0.5 pointer-events-none select-none">
+    <span class="font-mono text-[10px] text-[#f2ca50] tracking-wider leading-none block">
+      v3.1.00001
+    </span>
+  </div>
+</body>
+</html>

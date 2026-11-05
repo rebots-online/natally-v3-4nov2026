@@ -1,0 +1,107 @@
+[
+  {
+    "id": "synastry-sheet",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "Synastry Add the other person's birth details. Their name Birth date 14 June 1995 Birth time I don't know their birth ti"
+  },
+  {
+    "id": "synastry-name-input",
+    "tag": "input",
+    "type": "text",
+    "interactive": true,
+    "text": "[Name]"
+  },
+  {
+    "id": "synastry-day-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "14"
+  },
+  {
+    "id": "synastry-month-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "June"
+  },
+  {
+    "id": "synastry-year-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "1995"
+  },
+  {
+    "id": "synastry-time-input",
+    "tag": "input",
+    "type": "text",
+    "interactive": true,
+    "text": "12:00 PM"
+  },
+  {
+    "id": "synastry-time-unknown-checkbox",
+    "tag": "input",
+    "type": "checkbox",
+    "interactive": true,
+    "text": "I don't know their birth time"
+  },
+  {
+    "id": "synastry-place-input",
+    "tag": "input",
+    "type": "text",
+    "interactive": true,
+    "text": "Search city or location"
+  },
+  {
+    "id": "synastry-submit-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Compare our charts"
+  },
+  {
+    "id": "synastry-cancel-link",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Cancel"
+  },
+  {
+    "id": "share-sheet",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "Share your chart ♈︎ ♉︎ ♊︎ ♋︎ ♌︎ ♍︎ ♎︎ ♏︎ ♐︎ ♑︎ ♒︎ ♓︎ [Name]'s natal chart Copy link Save image Save PDF Close"
+  },
+  {
+    "id": "share-copy-link-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Copy link"
+  },
+  {
+    "id": "share-save-image-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Save image"
+  },
+  {
+    "id": "share-save-pdf-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Save PDF"
+  },
+  {
+    "id": "share-close-link",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Close"
+  }
+]

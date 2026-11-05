@@ -1,0 +1,28 @@
+{
+  "slug": "atelier",
+  "title": "Atelier",
+  "stitchScreenId": "da4e8cac6b3243b2b4dd55103326206b",
+  "htmlFileId": "49070a9bd7864b4abcd38b8d389f04f6",
+  "originalSha256": "83f45efad4ccdb6dea81456e28009ce4c617adbd8c982a1c742683fce4bcbc2e",
+  "frozenSha256": "b3c6527e1566a5fb627b9edd414bca6816ac70430b2a95e7d1fe0711d6f234a0",
+  "artReplaced": [
+    {
+      "what": "header app icon img (48px rounded square, alt \"Natally avatar\")",
+      "to": "../../../../../public/brand/192x192.png"
+    },
+    {
+      "what": "scene card illustration img inside #atelier-scene (alt \"Natally in her atelier\")",
+      "to": "../../../../../public/atelier/room.webp"
+    },
+    {
+      "what": "conversation header portrait img (40px circle, alt \"Natally avatar\")",
+      "to": "../../../../../public/brand/natally-still.webp"
+    }
+  ],
+  "glyphsFixed": 2,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 16,
+  "idCount": 23
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "birth-details",
+  "title": "Birth details",
+  "stitchScreenId": "eabf25d08d6f4a16a1e8f981a4cabb40",
+  "htmlFileId": "093f03e122b14e6598f938fbf5c28039",
+  "originalSha256": "d0fe667b1c5abb809338d39cfd60a0e8235e657a0804dd1c4ac03a564e374217",
+  "frozenSha256": "edf3db69784ad26566f9b620bd09158d93a432141b2d0a64b49c8b3769ad78e2",
+  "artReplaced": [
+    {
+      "what": "96px round cameo portrait: <img alt=\"Natally holding violet crystal ball\"> above the heading (Stitch stand-in hosted on lh3.googleusercontent.com)",
+      "to": "../../../../../public/brand/natally-still.webp"
+    }
+  ],
+  "glyphsFixed": 0,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 9,
+  "idCount": 10
+}

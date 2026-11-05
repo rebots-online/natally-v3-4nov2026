@@ -1,0 +1,27 @@
+{
+  "slug": "souvenir-pdf-elements",
+  "title": "Souvenir PDF — element pages",
+  "stitchScreenId": "26e874c8c46945e59068ecd7269773c1",
+  "htmlFileId": "169dba7bcaa6421689bf9e2c659379b8",
+  "originalSha256": "8206fc08ae1614a9381e21dbac3c160534a962fded250e60b9bd9cbf69a3a7ee",
+  "frozenSha256": "ca0129ceb2b399d35be7a74d98c7d224ff18f71dc24b5267dab12e85572c46f3",
+  "artReplaced": [
+    {
+      "what": "round cameo portrait img in .cameo-avatar-frame on #pdf-page-deep-dive (140px circle, alt \"Natally the cute robot astrologer\")",
+      "to": "../../../../../public/brand/natally-still.webp"
+    }
+  ],
+  "glyphsFixed": 5,
+  "placeholderTextRemoved": [
+    "In relation to",
+    "and the subtle balance within the celestial wheel.",
+    "As expressed through",
+    "and its harmonizing light across the natal hemisphere.",
+    "Anchored by the dignity of the",
+    ", unfolding ancient principles of correspondence."
+  ],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 11,
+  "idCount": 14
+}

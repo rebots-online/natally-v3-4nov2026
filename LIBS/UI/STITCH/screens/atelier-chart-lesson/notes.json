@@ -1,0 +1,32 @@
+{
+  "slug": "atelier-chart-lesson",
+  "title": "Atelier — chart and lesson",
+  "stitchScreenId": "21e8917c0b7340578351df0a42f17e52",
+  "htmlFileId": "04ff4bc655cc4be2b7ee0964298943da",
+  "originalSha256": "2ce0c1e79ad99da0c3ca51f6cc55368601eb30acf25dc904e50fe71ed5b19d5b",
+  "frozenSha256": "c6bee91626ade76a82dd9909cb9fa7e5743d69d79782f3b80a10606136876a42",
+  "artReplaced": [
+    {
+      "what": "header app icon img (48px rounded square, alt \"Natally\")",
+      "to": "../../../../../public/brand/192x192.png"
+    },
+    {
+      "what": "room picture img inside the #chart-room-inset panel (alt \"Natally in room\")",
+      "to": "../../../../../public/atelier/room.webp"
+    }
+  ],
+  "glyphsFixed": 32,
+  "placeholderTextRemoved": [],
+  "idsAdded": [
+    "atelier-chart-lesson-chip-sun",
+    "atelier-chart-lesson-chip-moon",
+    "atelier-chart-lesson-chip-mercury",
+    "atelier-chart-lesson-chip-venus",
+    "atelier-chart-lesson-chip-mars",
+    "atelier-chart-lesson-chip-jupiter",
+    "atelier-chart-lesson-chip-saturn"
+  ],
+  "duplicateIdsFound": [],
+  "interactiveCount": 16,
+  "idCount": 22
+}

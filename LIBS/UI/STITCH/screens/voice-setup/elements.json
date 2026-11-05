@@ -1,0 +1,51 @@
+[
+  {
+    "id": "voice-setup-steps",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "Downloading her voice 182 MB of 262 MB Loading her voice waiting Tuning to this device waiting"
+  },
+  {
+    "id": "voice-download-progress",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": ""
+  },
+  {
+    "id": "voice-load-progress",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Loading her voice waiting"
+  },
+  {
+    "id": "voice-tune-progress",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Tuning to this device waiting"
+  },
+  {
+    "id": "voice-calibration-result",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "WHAT SHE FOUND Speed [n]× real time Sentences ready ahead [n] Voices working at once [n]"
+  },
+  {
+    "id": "voice-continue-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Continue"
+  },
+  {
+    "id": "voice-skip-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Continue without sound"
+  }
+]

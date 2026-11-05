@@ -1,0 +1,28 @@
+{
+  "slug": "atelier-desktop",
+  "title": "Atelier — desktop",
+  "stitchScreenId": "79fbf6f8110b4f3a9fc7fe63d1745f81",
+  "htmlFileId": "dc79acecbfa1447bb62169a84cebfecf",
+  "originalSha256": "50e2af651681140a048b9d6688fc784863880d86e10def018d06f992619e2d9e",
+  "frozenSha256": "b598c75814da2552cf5c2ffc252ee58949f87339abd462b6a2a22ef715b1b785",
+  "artReplaced": [
+    {
+      "what": "header app icon img (56px rounded square, alt \"Natally avatar\")",
+      "to": "../../../../../public/brand/192x192.png"
+    },
+    {
+      "what": "scene card illustration img inside #atelier-scene (alt \"Natally in atelier\")",
+      "to": "../../../../../public/atelier/room.webp"
+    },
+    {
+      "what": "conversation header portrait img (40px circle, alt \"Natally\")",
+      "to": "../../../../../public/brand/natally-still.webp"
+    }
+  ],
+  "glyphsFixed": 2,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 16,
+  "idCount": 23
+}

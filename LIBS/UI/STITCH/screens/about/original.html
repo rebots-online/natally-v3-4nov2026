@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --canvas: #120c1c;
+      --panel: #1a1226;
+      --elevated: #2a1d3d;
+      --hairline: #3a2d50;
+      --cream: #f1e8d8;
+      --muted: #a698b5;
+      --gold: #c9a24a;
+      --gold-light: #f2ca50;
+    }
+    body {
+      background-color: var(--canvas);
+      color: var(--cream);
+      font-family: 'Nunito Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-fraunces {
+      font-family: 'Fraunces', serif;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .font-nunito {
+      font-family: 'Nunito Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex justify-center bg-[#120c1c]">
+  <!-- Mobile Screen Container -->
+  <main class="w-full max-w-[430px] min-h-screen px-[20px] pt-6 pb-10 flex flex-col justify-between box-border">
+
+    <div class="flex flex-col gap-6">
+      <!-- 1. Header row -->
+      <header class="flex items-center justify-between h-[44px]">
+        <h1 class="font-fraunces text-[28px] leading-tight text-[#f1e8d8] font-normal tracking-tight m-0">About</h1>
+        <button 
+          id="about-close-button" 
+          type="button" 
+          class="font-cinzel text-xs font-semibold tracking-[0.2em] text-[#f1e8d8] hover:text-[#c9a24a] transition-colors min-h-[44px] min-w-[44px] flex items-center justify-end px-2 bg-transparent border-0 cursor-pointer">
+          CLOSE
+        </button>
+      </header>
+
+      <!-- 2. Centred block -->
+      <section class="flex flex-col items-center text-center pt-2 pb-1">
+        <div class="w-[88px] h-[88px] rounded-[24%] border border-[#c9a24a] overflow-hidden bg-[#1a1226] flex items-center justify-center shadow-none mb-3">
+          <img 
+            src="https://lh3.googleusercontent.com/aida/AEtjO1XuRNRzb7RUbcZkNBdxegbvWLatcYtMoXmmdxFBllPbOrMGg_R17ygNjW_POfEESv4N7Zx42bh-j5dMKiPcoPO9NS7RtuQGuPCilnsPfp-H3s4e9xix6r4aHVWaQn-9xs5_6N5RVElv8hugdQTXPt1Po0WrZdSCO5HMYH2BWsWOc5vBxbXTYazP0Dou8A8dDVvnyKKeiN9iIz-1ti3mzsTZW9p0PLIOnV6uSzVVWz4yueLhPpMCa4YRZOs" 
+            alt="Natally avatar" 
+            class="w-full h-full object-cover" 
+          />
+        </div>
+        <div class="font-cinzel text-base font-bold tracking-[0.2em] text-[#c9a24a] uppercase mb-1">NATALLY</div>
+        <div id="about-version" class="font-mono-code text-xs text-[#f2ca50] tracking-wide mb-1">v3.1.00001</div>
+        <div class="font-nunito text-xs text-[#a698b5] tracking-normal">Readings by Natally</div>
+      </section>
+
+      <!-- 3. Card: How your chart is calculated -->
+      <article class="bg-[#1a1226] border border-[#3a2d50] rounded-[16px] p-5">
+        <h2 class="font-fraunces text-[20px] text-[#f1e8d8] font-normal tracking-tight m-0 mb-2">How your chart is calculated</h2>
+        <p class="font-nunito text-[15px] leading-relaxed text-[#f1e8d8] m-0">
+          Your chart is calculated with the Swiss Ephemeris from your birth date, time and place. Houses are Placidus. Without a birth time, your chart uses Whole Sign houses.
+        </p>
+      </article>
+
+      <!-- 4. Card: Her voice -->
+      <article class="bg-[#1a1226] border border-[#3a2d50] rounded-[16px] p-5">
+        <h2 class="font-fraunces text-[20px] text-[#f1e8d8] font-normal tracking-tight m-0 mb-2">Her voice</h2>
+        <p class="font-nunito text-[15px] leading-relaxed text-[#f1e8d8] m-0">
+          Natally's voice is generated on your device.
+        </p>
+      </article>
+
+      <!-- 5. Stamp & Licences Card -->
+      <section class="flex flex-col gap-2">
+        <div class="font-cinzel text-xs font-semibold tracking-[0.2em] text-[#c9a24a] uppercase px-1">
+          LICENCES
+        </div>
+        <div class="bg-[#1a1226] border border-[#3a2d50] rounded-[16px] overflow-hidden flex flex-col">
+          <!-- Row 1: Swiss Ephemeris -->
+          <button 
+            id="about-licence-swisseph" 
+            type="button" 
+            class="w-full h-[52px] px-5 flex items-center justify-between text-left bg-transparent border-0 border-b border-[#3a2d50] cursor-pointer hover:bg-[#2a1d3d]/50 transition-colors">
+            <span class="font-nunito text-[15px] text-[#f1e8d8]">Swiss Ephemeris</span>
+            <svg class="w-4 h-4 text-[#a698b5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Row 2: Supertonic voice model -->
+          <button 
+            id="about-licence-voice" 
+            type="button" 
+            class="w-full h-[52px] px-5 flex items-center justify-between text-left bg-transparent border-0 border-b border-[#3a2d50] cursor-pointer hover:bg-[#2a1d3d]/50 transition-colors">
+            <span class="font-nunito text-[15px] text-[#f1e8d8]">Supertonic voice model</span>
+            <svg class="w-4 h-4 text-[#a698b5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Row 3: Fonts -->
+          <button 
+            id="about-licence-fonts" 
+            type="button" 
+            class="w-full h-[52px] px-5 flex items-center justify-between text-left bg-transparent border-0 border-b border-[#3a2d50] cursor-pointer hover:bg-[#2a1d3d]/50 transition-colors">
+            <span class="font-nunito text-[15px] text-[#f1e8d8]">Fonts</span>
+            <svg class="w-4 h-4 text-[#a698b5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Row 4: Open source notices -->
+          <button 
+            id="about-licence-notices" 
+            type="button" 
+            class="w-full h-[52px] px-5 flex items-center justify-between text-left bg-transparent border-0 cursor-pointer hover:bg-[#2a1d3d]/50 transition-colors">
+            <span class="font-nunito text-[15px] text-[#f1e8d8]">Open source notices</span>
+            <svg class="w-4 h-4 text-[#a698b5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- 6. Row of three underlined ghost links -->
+      <nav aria-label="Legal and contact links" class="flex items-center justify-between px-6 pt-2 pb-1">
+        <a 
+          id="about-terms-link" 
+          href="#terms" 
+          class="font-nunito text-xs text-[#a698b5] underline underline-offset-4 hover:text-[#f1e8d8] transition-colors">
+          Terms
+        </a>
+        <a 
+          id="about-privacy-link" 
+          href="#privacy" 
+          class="font-nunito text-xs text-[#a698b5] underline underline-offset-4 hover:text-[#f1e8d8] transition-colors">
+          Privacy
+        </a>
+        <a 
+          id="about-contact-link" 
+          href="#contact" 
+          class="font-nunito text-xs text-[#a698b5] underline underline-offset-4 hover:text-[#f1e8d8] transition-colors">
+          Contact
+        </a>
+      </nav>
+    </div>
+
+    <!-- 7. Centred small muted footer line -->
+    <footer class="pt-8 text-center">
+      <p class="font-nunito text-xs text-[#a698b5] m-0">Roche Media Services</p>
+    </footer>
+
+  </main>
+</body>
+</html>

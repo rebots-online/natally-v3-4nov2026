@@ -1,0 +1,121 @@
+[
+  {
+    "id": "landing-nav",
+    "tag": "header",
+    "type": "",
+    "interactive": false,
+    "text": "Natally Sign In"
+  },
+  {
+    "id": "landing-signin-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Sign In"
+  },
+  {
+    "id": "landing-atelier",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "Room sounds on ⠇ Move chart Sound On Choose a planet, sign, house or aspect Sun in Scorpio Moon in Pisces Venus in Libra"
+  },
+  {
+    "id": "landing-inset-handle",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "⠇ Move chart"
+  },
+  {
+    "id": "landing-sound-toggle",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Sound On"
+  },
+  {
+    "id": "landing-element-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "Choose a planet, sign, house or aspect"
+  },
+  {
+    "id": "landing-create-chart-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Create your natal chart →"
+  },
+  {
+    "id": "landing-cta-hero",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Start my reading now!"
+  },
+  {
+    "id": "landing-explore-free-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Explore the room free first"
+  },
+  {
+    "id": "landing-cta-calculated",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Start my reading now!"
+  },
+  {
+    "id": "landing-cta-wheel",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Start my reading now!"
+  },
+  {
+    "id": "landing-cta-credits",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Get reading credits"
+  },
+  {
+    "id": "landing-install",
+    "tag": "hr",
+    "type": "",
+    "interactive": false,
+    "text": ""
+  },
+  {
+    "id": "landing-install-play",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Get it on Google Play"
+  },
+  {
+    "id": "landing-terms-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Terms"
+  },
+  {
+    "id": "landing-privacy-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Privacy"
+  },
+  {
+    "id": "landing-contact-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Contact Roche Media Services"
+  }
+]

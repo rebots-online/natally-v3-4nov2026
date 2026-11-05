@@ -1,0 +1,37 @@
+[
+  {
+    "id": "souvenir-close-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "CLOSE"
+  },
+  {
+    "id": "souvenir-buy-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Buy souvenir · US$30"
+  },
+  {
+    "id": "souvenir-ready-card",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "Your souvenir is ready Open your atelier Souvenir PDF Also sent to [email]"
+  },
+  {
+    "id": "souvenir-open-atelier-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Open your atelier"
+  },
+  {
+    "id": "souvenir-open-pdf-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Souvenir PDF"
+  }
+]

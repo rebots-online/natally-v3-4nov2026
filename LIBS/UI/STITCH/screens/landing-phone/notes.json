@@ -1,0 +1,24 @@
+{
+  "slug": "landing-phone",
+  "title": "Landing — phone",
+  "stitchScreenId": "6619a56c356a4eb9aeb2696e5a291162",
+  "htmlFileId": "7d574c2e7ea34ac98d572c4b83aedf46",
+  "originalSha256": "feaa9324487fe6f0a4061f426dea0abb192e5409768d59680d0e70d75a97a867",
+  "frozenSha256": "6d88761aab3761ba0acc1427c02993858b0b7f458298b29607b6ee35c4098524",
+  "artReplaced": [
+    {
+      "what": "round top-bar portrait img in #landing-nav (32px circle, alt \"Natally Logo\")",
+      "to": "../../../../../public/brand/natally-still.webp"
+    },
+    {
+      "what": "atelier scene card illustration img inside #landing-atelier (alt \"Natally reading natal chart\")",
+      "to": "../../../../../public/atelier/room.webp"
+    }
+  ],
+  "glyphsFixed": 0,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 13,
+  "idCount": 17
+}

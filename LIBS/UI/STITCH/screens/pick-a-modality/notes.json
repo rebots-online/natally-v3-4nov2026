@@ -1,0 +1,20 @@
+{
+  "slug": "pick-a-modality",
+  "title": "Pick a modality",
+  "stitchScreenId": "42c84a889f3f4fc79cad37a75e2b5c65",
+  "htmlFileId": "42e7f6ec3b5a49659976581cb40f4253",
+  "originalSha256": "113cd6199fb8a565c816d3bb0096bc6832f3d75ae1419a3e156e4be54257ee65",
+  "frozenSha256": "99c3aa311b10940f6311a3535cae826d0fd39086827108951b56e8e30e300ccc",
+  "artReplaced": [
+    {
+      "what": "72px rounded-square app icon: <img alt=\"Natally robot astrologer\"> inside #natally-app-icon (Stitch stand-in hosted on lh3.googleusercontent.com)",
+      "to": "../../../../../public/brand/192x192.png"
+    }
+  ],
+  "glyphsFixed": 0,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 2,
+  "idCount": 9
+}

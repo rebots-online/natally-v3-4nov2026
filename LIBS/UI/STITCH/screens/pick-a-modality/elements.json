@@ -1,0 +1,65 @@
+[
+  {
+    "id": "tailwind-config",
+    "tag": "script",
+    "type": "",
+    "interactive": false,
+    "text": ""
+  },
+  {
+    "id": "natally-app-icon",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": ""
+  },
+  {
+    "id": "modality-list",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Natal chart reading Begin Tarot Add-on I Ching Add-on"
+  },
+  {
+    "id": "modality-card-natal",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Natal chart reading Begin"
+  },
+  {
+    "id": "modality-natal-begin",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Begin"
+  },
+  {
+    "id": "modality-card-tarot",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Tarot Add-on"
+  },
+  {
+    "id": "modality-card-iching",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "I Ching Add-on"
+  },
+  {
+    "id": "modality-signin-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Sign in"
+  },
+  {
+    "id": "version-badge",
+    "tag": "aside",
+    "type": "",
+    "interactive": false,
+    "text": "v3.1.00001"
+  }
+]

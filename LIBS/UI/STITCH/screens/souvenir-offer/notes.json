@@ -1,0 +1,20 @@
+{
+  "slug": "souvenir-offer",
+  "title": "Souvenir offer",
+  "stitchScreenId": "d873939979ba40cb86063d56f061d104",
+  "htmlFileId": "f5a3d15acabd410fb192418cb5ffb34a",
+  "originalSha256": "a52ff303d3939f6744ecc63237fddf1d08fa520e63c38e1565eb366ca374b757",
+  "frozenSha256": "22450ffe82d7cd39f518894b1b00fcc4e0951025221fdd1bba2e0e1d3f58694a",
+  "artReplaced": [
+    {
+      "what": "wide 16:10 illustration card img (alt \"Natally at her desk in the candlelit atelier\")",
+      "to": "../../../../../public/atelier/room.webp"
+    }
+  ],
+  "glyphsFixed": 0,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 4,
+  "idCount": 5
+}

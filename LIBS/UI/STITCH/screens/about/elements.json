@@ -1,0 +1,65 @@
+[
+  {
+    "id": "about-close-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "CLOSE"
+  },
+  {
+    "id": "about-version",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "v3.1.00001"
+  },
+  {
+    "id": "about-licence-swisseph",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Swiss Ephemeris"
+  },
+  {
+    "id": "about-licence-voice",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Supertonic voice model"
+  },
+  {
+    "id": "about-licence-fonts",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Fonts"
+  },
+  {
+    "id": "about-licence-notices",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Open source notices"
+  },
+  {
+    "id": "about-terms-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Terms"
+  },
+  {
+    "id": "about-privacy-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Privacy"
+  },
+  {
+    "id": "about-contact-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Contact"
+  }
+]

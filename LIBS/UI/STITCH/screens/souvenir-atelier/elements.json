@@ -1,0 +1,58 @@
+[
+  {
+    "id": "souvenir-scene",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "⠇ Move chart"
+  },
+  {
+    "id": "souvenir-inset-handle",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "⠇ Move chart"
+  },
+  {
+    "id": "souvenir-replay-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Replay aloud"
+  },
+  {
+    "id": "souvenir-pdf-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "PDF"
+  },
+  {
+    "id": "souvenir-conversation",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "[Natally's saved reading] [your saved question] [Natally's saved answer]"
+  },
+  {
+    "id": "souvenir-question-input",
+    "tag": "input",
+    "type": "text",
+    "interactive": true,
+    "text": "Ask Natally something new"
+  },
+  {
+    "id": "souvenir-ask-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Ask"
+  },
+  {
+    "id": "souvenir-topup-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Top Up in Natally"
+  }
+]

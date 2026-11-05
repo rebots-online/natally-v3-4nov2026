@@ -1,0 +1,79 @@
+[
+  {
+    "id": "settings-close-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "CLOSE"
+  },
+  {
+    "id": "settings-read-aloud-toggle",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": ""
+  },
+  {
+    "id": "settings-room-sounds-toggle",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": ""
+  },
+  {
+    "id": "settings-room-volume-slider",
+    "tag": "input",
+    "type": "range",
+    "interactive": true,
+    "text": "Room sound volume"
+  },
+  {
+    "id": "settings-retune-voice-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Re-tune her voice to this device"
+  },
+  {
+    "id": "settings-house-system-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "Placidus"
+  },
+  {
+    "id": "settings-pause-motion-toggle",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": ""
+  },
+  {
+    "id": "settings-analytics-toggle",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": ""
+  },
+  {
+    "id": "settings-erase-history-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Erase my conversation history"
+  },
+  {
+    "id": "settings-profile-link",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Profile"
+  },
+  {
+    "id": "settings-about-link",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "About Natally"
+  }
+]

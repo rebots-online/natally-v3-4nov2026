@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Fraunces:opsz,wght@9..144,400;600&family=JetBrains+Mono:wght@400;500;600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg-deep: #0b0712;
+      --card-bg: #140d1f;
+      --hairline: #3a2d50;
+      --gold: #c9a24a;
+      --gold-dim: rgba(201, 162, 74, 0.35);
+      --cream: #f1e8d8;
+      --muted: #a698b5;
+      --elevated: #2a1d3d;
+      --gold-accent: #f2ca50;
+    }
+    body {
+      background-color: var(--bg-deep);
+      color: var(--cream);
+      font-family: 'Nunito Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .font-fraunces {
+      font-family: 'Fraunces', serif;
+    }
+    .font-nunito {
+      font-family: 'Nunito Sans', sans-serif;
+    }
+    /* Explicitly prevent glows and gradients as requested */
+    * {
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  </style>
+</head>
+<body class="bg-[#0b0712] p-4 sm:p-6 min-h-screen flex items-center justify-center relative">
+
+  <!-- Sign In Card -->
+  <main id="signin-card" class="w-full max-w-[380px] bg-[#140d1f] border border-[rgba(201,162,74,0.35)] rounded-[20px] p-[20px] flex flex-col my-8">
+    
+    <!-- 1. Header Row -->
+    <header class="flex items-center gap-3.5">
+      <div class="w-[68px] h-[68px] rounded-[24%] border border-[#c9a24a] overflow-hidden flex-shrink-0 bg-[#1a1226]">
+        <img 
+          src="https://lh3.googleusercontent.com/aida/AEtjO1XuRNRzb7RUbcZkNBdxegbvWLatcYtMoXmmdxFBllPbOrMGg_R17ygNjW_POfEESv4N7Zx42bh-j5dMKiPcoPO9NS7RtuQGuPCilnsPfp-H3s4e9xix6r4aHVWaQn-9xs5_6N5RVElv8hugdQTXPt1Po0WrZdSCO5HMYH2BWsWOc5vBxbXTYazP0Dou8A8dDVvnyKKeiN9iIz-1ti3mzsTZW9p0PLIOnV6uSzVVWz4yueLhPpMCa4YRZOs" 
+          alt="Natally the cute silver robot with amber eyes and plum turban holding a glowing crystal ball beside a small gold chart wheel" 
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="flex flex-col justify-center">
+        <h1 class="font-cinzel text-[#c9a24a] font-bold text-sm tracking-[0.2em] leading-snug">
+          READINGS BY NATALLY
+        </h1>
+      </div>
+    </header>
+
+    <!-- 2. Hairline divider -->
+    <div class="h-[1px] bg-[#3a2d50] w-full my-4"></div>
+
+    <!-- 3. First Cream Paragraph -->
+    <p class="font-nunito text-[#f1e8d8] text-[17px] leading-relaxed mb-3">
+      Sign in or create your account before introducing yourself to Natally.
+    </p>
+
+    <!-- 4. Second Cream Paragraph -->
+    <p class="font-nunito text-[#f1e8d8] text-sm leading-relaxed mb-2.5">
+      Create your free account for your Natally profile and personal continuity. Signing up does not buy anything or start a subscription.
+    </p>
+
+    <!-- 5. Muted Paragraph -->
+    <p class="font-nunito text-[#a698b5] text-xs leading-normal mb-2">
+      Purchases are separate from account creation and stay linked to your signed-in account.
+    </p>
+
+    <!-- 6. Legal / Links Paragraph -->
+    <p class="font-nunito text-[#a698b5] text-xs leading-normal mb-4">
+      Read our <a href="#" id="signin-terms-link" class="underline text-[#a698b5] hover:text-[#f1e8d8]">Terms</a> and <a href="#" id="signin-privacy-link" class="underline text-[#a698b5] hover:text-[#f1e8d8]">Privacy Policy</a>.
+    </p>
+
+    <!-- 7. Google Button -->
+    <button 
+      id="signin-google-button" 
+      type="button" 
+      class="w-full h-[48px] rounded-[14px] bg-[#2a1d3d] border border-[#3a2d50] hover:border-[#c9a24a] flex items-center justify-center gap-3 px-4 transition-colors mb-4"
+    >
+      <!-- Google "G" logo inline SVG -->
+      <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+      </svg>
+      <span class="font-mono font-bold text-xs tracking-wider text-[#f1e8d8]">Continue with Google</span>
+    </button>
+
+    <!-- 8. Divider with Chip -->
+    <div class="relative flex items-center justify-center my-3">
+      <div class="w-full h-[1px] bg-[#3a2d50] absolute"></div>
+      <div class="relative bg-[#2a1d3d] px-2.5 py-1 rounded-[6px] border border-[#3a2d50]">
+        <span class="font-mono text-[9px] uppercase tracking-wider text-[#a698b5] font-semibold">
+          OR WITH EMAIL / PHONE
+        </span>
+      </div>
+    </div>
+
+    <!-- 9. Segmented Control -->
+    <div id="signin-mode-tabs" class="grid grid-cols-3 bg-[#1a1226] border border-[#3a2d50] rounded-[10px] p-1 gap-1 my-3">
+      <button 
+        type="button" 
+        id="signin-tab-login" 
+        class="bg-[#2a1d3d] text-[#c9a24a] font-mono text-[11px] font-bold py-1.5 px-2 rounded-[7px] text-center border border-[rgba(201,162,74,0.3)] transition-colors"
+      >
+        Email Log In
+      </button>
+      <button 
+        type="button" 
+        id="signin-tab-signup" 
+        class="text-[#a698b5] hover:text-[#f1e8d8] font-mono text-[11px] py-1.5 px-2 rounded-[7px] text-center transition-colors"
+      >
+        Sign Up
+      </button>
+      <button 
+        type="button" 
+        id="signin-tab-phone" 
+        class="text-[#a698b5] hover:text-[#f1e8d8] font-mono text-[11px] py-1.5 px-2 rounded-[7px] text-center transition-colors"
+      >
+        Phone
+      </button>
+    </div>
+
+    <!-- 10. Email Field -->
+    <div class="flex flex-col gap-1.5 mb-3">
+      <label for="signin-email-input" class="font-mono text-[10px] uppercase tracking-widest text-[#a698b5]">
+        Email Address
+      </label>
+      <div class="relative flex items-center">
+        <span class="absolute left-3 text-[#a698b5] flex items-center justify-center pointer-events-none">
+          <!-- Envelope Icon -->
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </span>
+        <input 
+          id="signin-email-input" 
+          type="email" 
+          placeholder="pilgrim@cosmos.org" 
+          class="w-full bg-[#1a1226] border border-[#3a2d50] focus:border-[#c9a24a] rounded-[10px] pl-9 pr-3 py-2.5 font-mono text-xs text-[#f1e8d8] placeholder-[#a698b5]/50 outline-none transition-colors"
+        />
+      </div>
+    </div>
+
+    <!-- 11. Password Field -->
+    <div class="flex flex-col gap-1.5 mb-4">
+      <label for="signin-password-input" class="font-mono text-[10px] uppercase tracking-widest text-[#a698b5]">
+        Password
+      </label>
+      <input 
+        id="signin-password-input" 
+        type="password" 
+        value="••••••••••••" 
+        class="w-full bg-[#1a1226] border border-[#3a2d50] focus:border-[#c9a24a] rounded-[10px] px-3 py-2.5 font-mono text-xs text-[#f1e8d8] tracking-widest outline-none transition-colors"
+      />
+    </div>
+
+    <!-- 12. Submit Button -->
+    <button 
+      id="signin-submit-button" 
+      type="button" 
+      class="w-full h-[48px] rounded-[14px] bg-[#c9a24a] hover:bg-[#d6b059] active:bg-[#ba943e] flex items-center justify-center gap-2 px-4 transition-colors"
+    >
+      <!-- Arrow into door icon -->
+      <svg class="w-4 h-4 text-[#0b0712]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+        <polyline points="10 17 15 12 10 7"></polyline>
+        <line x1="15" y1="12" x2="3" y2="12"></line>
+      </svg>
+      <span class="font-mono font-bold text-xs tracking-wider text-[#0b0712]">
+        Log In
+      </span>
+    </button>
+  </main>
+
+  <!-- Fixed Version Badge -->
+  <aside class="fixed bottom-3 right-3 font-mono text-[11px] text-[#f2ca50] bg-[#0b0712] px-2 py-0.5 pointer-events-none select-none z-50">
+    v3.1.00001
+  </aside>
+
+</body>
+</html>

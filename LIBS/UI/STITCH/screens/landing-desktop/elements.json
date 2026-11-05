@@ -1,0 +1,212 @@
+[
+  {
+    "id": "landing-nav",
+    "tag": "header",
+    "type": "",
+    "interactive": false,
+    "text": "Natally Your chart Your chart, explained aloud Personal readings Prices Learn astrology Sign In"
+  },
+  {
+    "id": "landing-desktop-logo-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Natally"
+  },
+  {
+    "id": "landing-desktop-nav-your-chart",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Your chart"
+  },
+  {
+    "id": "landing-desktop-nav-explained-aloud",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Your chart, explained aloud"
+  },
+  {
+    "id": "landing-desktop-nav-personal-readings",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Personal readings"
+  },
+  {
+    "id": "landing-desktop-nav-prices",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Prices"
+  },
+  {
+    "id": "landing-desktop-nav-learn-astrology",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Learn astrology"
+  },
+  {
+    "id": "landing-signin-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Sign In"
+  },
+  {
+    "id": "landing-cta-hero",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Start my reading now!"
+  },
+  {
+    "id": "landing-explore-free-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Explore the room free first"
+  },
+  {
+    "id": "landing-cta-calculated",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Start my reading now!"
+  },
+  {
+    "id": "landing-cta-wheel",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Start my reading now!"
+  },
+  {
+    "id": "landing-cta-credits",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Get reading credits"
+  },
+  {
+    "id": "landing-atelier",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Room sounds on ⠇ Move chart Aurelia Placidus · Toronto Chart highlights follow Natally's reading Sound On Explore a plac"
+  },
+  {
+    "id": "landing-inset-handle",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "⠇ Move chart Aurelia Placidus · Toronto"
+  },
+  {
+    "id": "landing-sound-toggle",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Sound On"
+  },
+  {
+    "id": "landing-element-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "Choose a planet, sign, house or aspect"
+  },
+  {
+    "id": "landing-create-chart-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Create your natal chart"
+  },
+  {
+    "id": "landing-prices",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "WHAT YOU CAN BUY TODAY Two purchases, one experience. Souvenir reading US$30 Your assembled natal chart and personal rea"
+  },
+  {
+    "id": "landing-buy-souvenir",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Buy souvenir reading"
+  },
+  {
+    "id": "landing-buy-credits",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Get reading credits"
+  },
+  {
+    "id": "landing-restore-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Restore your existing access"
+  },
+  {
+    "id": "landing-install",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "Install Natally On Android, get the Natally app from Google Play: it runs smoother and sounds better. On Windows and Lin"
+  },
+  {
+    "id": "landing-install-play",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Get it on Google Play"
+  },
+  {
+    "id": "landing-install-windows",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Download for Windows"
+  },
+  {
+    "id": "landing-install-linux",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Download for Linux"
+  },
+  {
+    "id": "landing-explore-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Explore your chart with Natally"
+  },
+  {
+    "id": "landing-terms-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Terms"
+  },
+  {
+    "id": "landing-privacy-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Privacy"
+  },
+  {
+    "id": "landing-contact-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Contact Roche Media Services"
+  }
+]

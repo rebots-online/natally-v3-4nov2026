@@ -1,0 +1,163 @@
+[
+  {
+    "id": "atelier-header",
+    "tag": "header",
+    "type": "",
+    "interactive": false,
+    "text": "NATALLY [Name] 79 Cr · Top Up Souvenir Profile"
+  },
+  {
+    "id": "atelier-topup-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "79 Cr · Top Up"
+  },
+  {
+    "id": "atelier-souvenir-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Souvenir"
+  },
+  {
+    "id": "atelier-profile-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Profile"
+  },
+  {
+    "id": "atelier-scene",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "⠇ Move chart Room sounds on Here with you An imagined sky"
+  },
+  {
+    "id": "atelier-inset",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "⠇ Move chart"
+  },
+  {
+    "id": "atelier-inset-handle",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "⠇ Move chart"
+  },
+  {
+    "id": "atelier-room-sounds-chip",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Room sounds on"
+  },
+  {
+    "id": "atelier-status",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Here with you"
+  },
+  {
+    "id": "atelier-sound-toggle",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Sound On"
+  },
+  {
+    "id": "atelier-element-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "Choose a planet, sign, house or aspect"
+  },
+  {
+    "id": "atelier-share-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Share chart"
+  },
+  {
+    "id": "atelier-horoscope-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "My Horoscope"
+  },
+  {
+    "id": "atelier-synastry-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Synastry"
+  },
+  {
+    "id": "atelier-view-room-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Room"
+  },
+  {
+    "id": "atelier-view-chart-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Your chart"
+  },
+  {
+    "id": "atelier-pause-motion-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Pause motion"
+  },
+  {
+    "id": "atelier-conversation",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "NATALLY Welcome back, [Name]. Tap any placement on your chart and I'll explain it. [your question] [Natally's reading of"
+  },
+  {
+    "id": "conversation-read-aloud-toggle",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Read aloud"
+  },
+  {
+    "id": "conversation-settings-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Settings"
+  },
+  {
+    "id": "conversation-save-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Save conversation"
+  },
+  {
+    "id": "conversation-input",
+    "tag": "input",
+    "type": "text",
+    "interactive": true,
+    "text": "Ask Natally about your chart"
+  },
+  {
+    "id": "conversation-send-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Send"
+  }
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "lesson-topup-pill",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "0 Cr · Top Up"
+  },
+  {
+    "id": "lesson-souvenir-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Souvenir"
+  },
+  {
+    "id": "lesson-profile-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Profile"
+  },
+  {
+    "id": "chart-main-view",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "♈︎ ♉︎ ♊︎ ♋︎ ♌︎ ♍︎ ♎︎ ♏︎ ♐︎ ♑︎ ♒︎ ♓︎ ☉︎ ☽︎ ♂︎ ♃︎ ♄︎ ♀︎ Venus ⠇ Move room Room sounds on Speaking"
+  },
+  {
+    "id": "chart-room-inset",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "⠇ Move room"
+  },
+  {
+    "id": "chart-room-inset-handle",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "⠇ Move room"
+  },
+  {
+    "id": "chart-status",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Speaking"
+  },
+  {
+    "id": "lesson-sound-toggle",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Sound On"
+  },
+  {
+    "id": "lesson-element-select",
+    "tag": "select",
+    "type": "",
+    "interactive": true,
+    "text": "♀︎ Venus"
+  },
+  {
+    "id": "element-chip-row",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "☉︎ Sun ☽︎ Moon ☿︎ Mercury ♀︎ Venus ♂︎ Mars ♃︎ Jupiter ♄︎ Saturn"
+  },
+  {
+    "id": "atelier-chart-lesson-chip-sun",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "☉︎ Sun"
+  },
+  {
+    "id": "atelier-chart-lesson-chip-moon",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "☽︎ Moon"
+  },
+  {
+    "id": "atelier-chart-lesson-chip-mercury",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "☿︎ Mercury"
+  },
+  {
+    "id": "atelier-chart-lesson-chip-venus",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "♀︎ Venus"
+  },
+  {
+    "id": "atelier-chart-lesson-chip-mars",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "♂︎ Mars"
+  },
+  {
+    "id": "atelier-chart-lesson-chip-jupiter",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "♃︎ Jupiter"
+  },
+  {
+    "id": "atelier-chart-lesson-chip-saturn",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "♄︎ Saturn"
+  },
+  {
+    "id": "lesson-conversation",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "LESSON · FREE Natally [Natally's lesson about Venus] YOU AND VENUS [your Venus: its sign, house and closest aspect] Nata"
+  },
+  {
+    "id": "lesson-personal-reading-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Hear my personal reading"
+  },
+  {
+    "id": "lesson-topup-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Top Up"
+  },
+  {
+    "id": "lesson-input",
+    "tag": "input",
+    "type": "text",
+    "interactive": true,
+    "text": "Ask Natally about your chart"
+  },
+  {
+    "id": "lesson-send-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Send"
+  }
+]

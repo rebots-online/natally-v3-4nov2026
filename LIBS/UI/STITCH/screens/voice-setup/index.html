@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice setup</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Fraunces:opsz,wght@9..144,400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { font-variant-emoji: text; }
+    :root {
+      --canvas: #120c1c;
+      --panel: #1a1226;
+      --elevated: #2a1d3d;
+      --hairline: #3a2d50;
+      --cream: #f1e8d8;
+      --muted: #a698b5;
+      --gold: #c9a24a;
+    }
+    body {
+      background-color: var(--canvas);
+      color: var(--cream);
+      font-family: 'Nunito Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-fraunces {
+      font-family: 'Fraunces', serif;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between relative bg-[#120c1c] text-[#f1e8d8] selection:bg-[#c9a24a] selection:text-[#120c1c]">
+  <!-- Main content container -->
+  <main class="w-full max-w-md mx-auto px-4 pt-10 pb-16 flex flex-col items-center">
+    
+    <!-- 1. Circular Cameo -->
+    <div class="w-24 h-24 rounded-full border border-[#c9a24a] overflow-hidden flex items-center justify-center bg-[#1a1226] mb-6 flex-shrink-0">
+      <img 
+        src="../../../../../public/brand/natally-still.webp" 
+        alt="Natally" 
+        class="w-full h-full object-cover object-center"
+      />
+    </div>
+
+    <!-- 2. Heading -->
+    <h1 class="font-fraunces text-[28px] leading-tight text-center text-[#f1e8d8] mb-2 font-normal">
+      Natally is finding her voice.
+    </h1>
+
+    <!-- 3. Muted Subtitle -->
+    <p class="text-[15px] text-center text-[#a698b5] mb-6 leading-relaxed">
+      Her voice runs on this device. This happens once.
+    </p>
+
+    <!-- 4. Steps Card -->
+    <section id="voice-setup-steps" class="w-full bg-[#1a1226] rounded-xl border border-[#3a2d50] overflow-hidden mb-4">
+      
+      <!-- Row 1: in progress -->
+      <div class="p-4 flex flex-col">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="w-[10px] h-[10px] rounded-full bg-[#c9a24a] inline-block flex-shrink-0"></span>
+            <span class="font-bold text-[#f1e8d8] text-[15px]">Downloading her voice</span>
+          </div>
+          <span class="font-mono text-[12px] text-[#a698b5]">182 MB of 262 MB</span>
+        </div>
+        <!-- Progress bar (Row 1) -->
+        <div id="voice-download-progress" class="w-full h-1 bg-[#2a1d3d] rounded-full mt-3 overflow-hidden">
+          <div class="bg-[#c9a24a] h-full rounded-full" style="width: 70%;"></div>
+        </div>
+      </div>
+
+      <!-- Hairline divider -->
+      <div class="h-[1px] bg-[#3a2d50] w-full"></div>
+
+      <!-- Row 2: waiting -->
+      <div id="voice-load-progress" class="p-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="w-[10px] h-[10px] rounded-full bg-[#a698b5] inline-block flex-shrink-0"></span>
+          <span class="font-bold text-[#f1e8d8] text-[15px]">Loading her voice</span>
+        </div>
+        <span class="font-mono text-[12px] text-[#a698b5]">waiting</span>
+      </div>
+
+      <!-- Hairline divider -->
+      <div class="h-[1px] bg-[#3a2d50] w-full"></div>
+
+      <!-- Row 3: waiting -->
+      <div id="voice-tune-progress" class="p-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="w-[10px] h-[10px] rounded-full bg-[#a698b5] inline-block flex-shrink-0"></span>
+          <span class="font-bold text-[#f1e8d8] text-[15px]">Tuning to this device</span>
+        </div>
+        <span class="font-mono text-[12px] text-[#a698b5]">waiting</span>
+      </div>
+
+    </section>
+
+    <!-- 5. Calibration Result Card (Dimmed to ~50%) -->
+    <section id="voice-calibration-result" class="w-full bg-[#1a1226] rounded-xl border border-[#3a2d50] p-4 mb-6 opacity-50">
+      <div class="font-cinzel text-[11px] tracking-widest text-[#c9a24a] uppercase font-semibold mb-3">
+        WHAT SHE FOUND
+      </div>
+      
+      <div class="space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span class="text-[14px] text-[#a698b5]">Speed</span>
+          <span class="font-mono text-[12px] text-[#f1e8d8]">[n]× real time</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-[14px] text-[#a698b5]">Sentences ready ahead</span>
+          <span class="font-mono text-[12px] text-[#f1e8d8]">[n]</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-[14px] text-[#a698b5]">Voices working at once</span>
+          <span class="font-mono text-[12px] text-[#f1e8d8]">[n]</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Solid Gold Continue Button (disabled at 40% opacity) -->
+    <button 
+      id="voice-continue-button" 
+      disabled 
+      class="w-full h-[52px] rounded-xl bg-[#c9a24a] text-[#120c1c] font-bold text-[16px] flex items-center justify-center opacity-40 cursor-not-allowed mb-4 select-none tracking-wide"
+    >
+      Continue
+    </button>
+
+    <!-- 7. Ghost Link -->
+    <a 
+      href="#" 
+      id="voice-skip-link" 
+      class="text-[#a698b5] hover:text-[#f1e8d8] text-[14px] transition-colors duration-150 underline underline-offset-4 decoration-[#3a2d50] hover:decoration-[#a698b5]"
+    >
+      Continue without sound
+    </a>
+
+  </main>
+
+  <!-- Fixed Version Badge bottom-right -->
+  <div class="fixed bottom-3 right-3 z-50 pointer-events-none">
+    <div class="font-mono text-[11px] tracking-wider text-[#f2ca50] bg-[#0b0712] border border-[#3a2d50] px-2 py-0.5 rounded">
+      v3.1.00001
+    </div>
+  </div>
+</body>
+</html>

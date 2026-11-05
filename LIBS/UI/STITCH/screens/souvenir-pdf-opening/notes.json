@@ -1,0 +1,20 @@
+{
+  "slug": "souvenir-pdf-opening",
+  "title": "Souvenir PDF — opening pages",
+  "stitchScreenId": "705d5546832f46bd94ca7daf963be5f5",
+  "htmlFileId": "e9922fbd11bf44d2b3ff7429d488033d",
+  "originalSha256": "d6918e4b8bf4dcc2391f442cee5efedc82d09844d7d60dcb70952657bb634f97",
+  "frozenSha256": "f2301a39e507ad9b7c35ab2b32cbcf2c34f52f21a768afb696f502314d3ee22f",
+  "artReplaced": [
+    {
+      "what": "round cameo portrait img on #pdf-page-cover beside \"Read aloud by Natally\" (40px circle, alt \"Natally avatar\")",
+      "to": "../../../../../public/brand/natally-still.webp"
+    }
+  ],
+  "glyphsFixed": 45,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 1,
+  "idCount": 5
+}

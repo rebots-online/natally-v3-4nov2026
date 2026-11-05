@@ -1,0 +1,79 @@
+[
+  {
+    "id": "tailwind-config",
+    "tag": "script",
+    "type": "",
+    "interactive": false,
+    "text": ""
+  },
+  {
+    "id": "profile-close-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "CLOSE"
+  },
+  {
+    "id": "profile-balance-card",
+    "tag": "section",
+    "type": "",
+    "interactive": false,
+    "text": "BALANCE 79 Cr Top Up"
+  },
+  {
+    "id": "profile-topup-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Top Up"
+  },
+  {
+    "id": "profile-transactions",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "Souvenir reading +39 Cr US$0.99 · 30 October 2026 · paid Open your atelier Souvenir PDF Exploration credits +40 Cr US$0."
+  },
+  {
+    "id": "profile-souvenir-atelier-1",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Open your atelier"
+  },
+  {
+    "id": "profile-souvenir-pdf-1",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Souvenir PDF"
+  },
+  {
+    "id": "profile-restore-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Restore purchases"
+  },
+  {
+    "id": "profile-settings-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Settings"
+  },
+  {
+    "id": "profile-about-link",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "About Natally"
+  },
+  {
+    "id": "profile-signout-button",
+    "tag": "button",
+    "type": "",
+    "interactive": true,
+    "text": "Sign out"
+  }
+]

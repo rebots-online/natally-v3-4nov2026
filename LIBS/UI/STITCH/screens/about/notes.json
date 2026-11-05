@@ -1,0 +1,20 @@
+{
+  "slug": "about",
+  "title": "About",
+  "stitchScreenId": "1b810de1bd774bb8a307fd245577e941",
+  "htmlFileId": "704fc11c545d4f0f8d3046e6743b1083",
+  "originalSha256": "759da9709441793ee05f4bb2fc31ceff21c481f106afb439adfbb336ccdbfcaf",
+  "frozenSha256": "7c2eff6e1a3e8024512a86d0847a35e7c4f95aed1f185b8ada0158ebaa9363aa",
+  "artReplaced": [
+    {
+      "what": "app icon img in the centred block (88px rounded square, alt \"Natally avatar\")",
+      "to": "../../../../../public/brand/192x192.png"
+    }
+  ],
+  "glyphsFixed": 0,
+  "placeholderTextRemoved": [],
+  "idsAdded": [],
+  "duplicateIdsFound": [],
+  "interactiveCount": 8,
+  "idCount": 9
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "pdf-page-cover",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "READINGS BY NATALLY ♈︎ ♉︎ ♊︎ ♋︎ ♌︎ ♍︎ ♎︎ ♏︎ ♐︎ ♑︎ ♒︎ ♓︎ ☉︎ ☽︎ ♀︎ ♂︎ ♃︎ [Name]'s natal chart [birth date] · [birth time]"
+  },
+  {
+    "id": "pdf-page-chart",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "YOUR CALCULATED CHART ♈︎ ♉︎ ♊︎ ♋︎ ♌︎ ♍︎ ♎︎ ♏︎ ♐︎ ♑︎ ♒︎ ♓︎ 1 2 3 4 5 6 7 8 9 10 11 12 ☉︎ ☽︎ ♀︎ ♂︎ ♃︎ ♄︎ ASC [degree sign]"
+  },
+  {
+    "id": "pdf-page-positions",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "YOUR CALCULATED POSITIONS BODY SIGN DEGREE HOUSE ☉︎ Sun [sign] [degree] [house] ☽︎ Moon [sign] [degree] [house] ☿︎ Mercu"
+  },
+  {
+    "id": "pdf-page-conversation",
+    "tag": "div",
+    "type": "",
+    "interactive": false,
+    "text": "YOUR CONVERSATION WITH NATALLY [Natally's saved reading] [your saved question] [Natally's saved reading] [your saved que"
+  },
+  {
+    "id": "pdf-hear-natally-conversation",
+    "tag": "a",
+    "type": "",
+    "interactive": true,
+    "text": "Hear Natally"
+  }
+]

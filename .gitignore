@@ -1,0 +1,25 @@
+# secrets and local configuration: never committed (public repo)
+.env
+.env.local
+.env.*.local
+*.keystore
+*.jks
+keystore.properties
+# working storage
+.tmp/
+release.lock
+# dependencies and build output
+node_modules/
+dist-web/
+build/
+src-tauri/target/
+src-tauri/gen/android/.gradle/
+src-tauri/gen/android/build/
+src-tauri/gen/android/app/build/
+src-tauri/gen/android/local.properties
+# release binaries stay untracked; the manifest that names and hashes them is tracked
+dist/*
+!dist/RELEASE-MANIFEST.json
+# index and editor noise
+.codegraph/
+.DS_Store

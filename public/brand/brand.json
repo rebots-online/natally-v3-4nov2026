@@ -1,0 +1,33 @@
+{
+  "schema": "natally.brand/v1",
+  "id": "natally",
+  "version": "1.0.0",
+  "voice": {
+    "engine": "supertonic-onnx",
+    "speaker": "F4",
+    "pitch": 1.15,
+    "rate": 0.9,
+    "tone": "soft",
+    "language": "en-US",
+    "userSelectable": false
+  },
+  "character": {
+    "reading": "A little febrile and oracular; intimate, electrically alert, precise about the actual chart or ritual facts.",
+    "aside": "Very sharp, dry and candid when Natally herself overshares or wanders off-chart; brief and self-aware.",
+    "continuity": "One recognizable Natally across astrology, tarot and every future tradition. Modules cannot replace her voice or persona.",
+    "care": "Sharpness is not ridicule of user disclosures. No invented autobiography or deterministic promises."
+  },
+  "baseline": {
+    "entry": "atelier/baseline.html",
+    "width": 1600,
+    "height": 1000,
+    "state": "idle",
+    "tool": "crystal-ball",
+    "motion": "none",
+    "personalData": false
+  },
+  "media": {
+    "still": "atelier/assets/natally-still.webp",
+    "animated": "atelier/assets/natally-mascot.webp"
+  }
+}

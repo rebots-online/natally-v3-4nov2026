@@ -1,4 +1,5 @@
 // The shared types of §4, verbatim. Closed-set arrays are the only runtime code from §4.
+import type * as React from 'react';
 import type { AnalyticsCatalog } from './analytics';
 
 export type { AnalyticsCatalog } from './analytics';

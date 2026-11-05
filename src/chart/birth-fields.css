@@ -1,0 +1,148 @@
+/* What the frozen screens state outside utility classes, scoped to their own forms because the two differ. */
+
+/* birth-details */
+#birth-form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a698b5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#birth-form input:focus,
+#birth-form select:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+#birth-form .custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-panel);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#birth-form .custom-checkbox:checked {
+  background-color: var(--color-elevated);
+  border-color: var(--color-gold);
+}
+#birth-form .custom-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-gold);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 3px;
+}
+
+/* synastry-share-sheets */
+#synastry-sheet .field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+#synastry-sheet .field-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-muted);
+}
+#synastry-sheet .input-field {
+  height: 48px;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 0 14px;
+  outline: none;
+  width: 100%;
+}
+#synastry-sheet .input-field::placeholder {
+  color: var(--color-muted);
+  opacity: 0.6;
+}
+#synastry-sheet .date-row {
+  display: grid;
+  grid-template-columns: 80px 1.4fr 1fr;
+  gap: 8px;
+}
+#synastry-sheet .select-field {
+  height: 48px;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 0 28px 0 10px;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+}
+#synastry-sheet .checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+#synastry-sheet .custom-checkbox {
+  width: 22px;
+  height: 22px;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+#synastry-sheet .custom-checkbox:checked {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+#synastry-sheet .custom-checkbox:checked::after {
+  content: '';
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-canvas);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+#synastry-sheet .checkbox-label {
+  font-size: 14px;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  user-select: none;
+}
+#synastry-sheet .search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#synastry-sheet .search-input-wrapper svg {
+  position: absolute;
+  left: 14px;
+  color: var(--color-muted);
+  pointer-events: none;
+}
+#synastry-sheet .search-input {
+  padding-left: 42px;
+}

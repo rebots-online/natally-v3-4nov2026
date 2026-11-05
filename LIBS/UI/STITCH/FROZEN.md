@@ -28,7 +28,7 @@ a price, a balance) are examples; the app shows real data or values from configu
 | Landing | `screens/landing-desktop/` | `5e925899faab4625b177deb87a05d9d1` | 30 | 25 | 2 | 6 | `413a1c7ecb3b68d6…` |
 | Landing — phone | `screens/landing-phone/` | `6619a56c356a4eb9aeb2696e5a291162` | 17 | 13 | 2 | 0 | `6d88761aab3761ba…` |
 | Sign in | `screens/sign-in/` | `e45d0018500d4f31a61e94917c9f6c68` | 11 | 9 | 1 | 0 | `460c6d7ccae62d47…` |
-| Birth details | `screens/birth-details/` | `eabf25d08d6f4a16a1e8f981a4cabb40` | 10 | 9 | 1 | 0 | `edf3db69784ad265…` |
+| Birth details | `screens/birth-details/` | `eabf25d08d6f4a16a1e8f981a4cabb40` | 10 | 9 | 1 | 0 | `1b20c79ad00ed52e…` |
 | Voice setup | `screens/voice-setup/` | `f1caf1c402c6466191022b8a59681af3` | 7 | 2 | 1 | 0 | `1f0fe7565d3a4dbc…` |
 | Atelier | `screens/atelier/` | `da4e8cac6b3243b2b4dd55103326206b` | 23 | 16 | 3 | 0 | `b3c6527e1566a5fb…` |
 | Atelier — desktop | `screens/atelier-desktop/` | `79fbf6f8110b4f3a9fc7fe63d1745f81` | 23 | 16 | 3 | 0 | `b598c75814da2552…` |
@@ -67,6 +67,7 @@ a price, a balance) are examples; the app shows real data or values from configu
 
 ### Birth details (`birth-details`)
 - Art: 96px round cameo portrait: <img alt="Natally holding violet crystal ball"> above the heading (Stitch stand-in hosted on lh3.googleusercontent.com) → `../../../../../public/brand/natally-still.webp`
+- Owner correction after freeze: label "Name Natally should use" changed to "Your name".
 
 ### Voice setup (`voice-setup`)
 - Art: 96px round cameo portrait: <img alt="Natally"> above the heading (Stitch stand-in hosted on lh3.googleusercontent.com) → `../../../../../public/brand/natally-still.webp`

@@ -218,3 +218,9 @@ sent through the kstore MCP.
   regardless.
 - No Android device is attached, so the Play purchase sheet is not exercised on hardware.
 - This machine has no Netlify login; I deploy through the Netlify connector.
+
+## Owner corrections after freeze
+
+- The chart wheel is a lit 3D slow-rotating toroid, as in the reference atelier inset.
+- Birth details label reads `Your name`.
+- The Free cookies plate from the reference atelier is restored.

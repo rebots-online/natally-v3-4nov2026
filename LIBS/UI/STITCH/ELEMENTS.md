@@ -94,7 +94,7 @@ Every element with an id, per screen, in document order. `●` marks an interact
 | | id | tag | text |
 |---|---|---|---|
 | ● | `birth-back-link` | a | Back |
-|  | `birth-form` | form | Name Natally should use Birth date 8 November 1997 Birth time I don't know my birth time Without a birth time your chart |
+|  | `birth-form` | form | Your name Birth date 8 November 1997 Birth time I don't know my birth time Without a birth time your chart |
 | ● | `birth-name-input` | input[text] | Aurelia |
 | ● | `birth-day-select` | select | 8 |
 | ● | `birth-month-select` | select | November |

@@ -16,5 +16,8 @@
   "idsAdded": [],
   "duplicateIdsFound": [],
   "interactiveCount": 9,
-  "idCount": 10
+  "idCount": 10,
+  "orchestratorCorrections": [
+    "Owner correction after freeze: label \"Name Natally should use\" changed to \"Your name\"."
+  ]
 }

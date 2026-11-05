@@ -1,0 +1,746 @@
+[
+ {
+  "key": "config",
+  "title": "Configuration",
+  "folder": "src/config",
+  "responsibility": "Only reader of import.meta.env; exposes the typed client configuration.",
+  "dependsOn": [],
+  "screens": [],
+  "ownsFiles": [
+   "src/config/**"
+  ],
+  "foundationSections": [
+   "04",
+   "08"
+  ]
+ },
+ {
+  "key": "types",
+  "title": "Shared types",
+  "folder": "src/types",
+  "responsibility": "Every type and closed set that crosses a module boundary.",
+  "dependsOn": [],
+  "screens": [],
+  "ownsFiles": [
+   "src/types/**"
+  ],
+  "foundationSections": [
+   "04"
+  ]
+ },
+ {
+  "key": "settings",
+  "title": "Local settings",
+  "folder": "src/settings",
+  "responsibility": "Persisted per-device customer settings store.",
+  "dependsOn": [
+   "types"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "src/settings/**"
+  ],
+  "foundationSections": [
+   "04",
+   "05",
+   "06"
+  ]
+ },
+ {
+  "key": "ui",
+  "title": "Design system UI",
+  "folder": "src/ui",
+  "responsibility": "Fonts, token CSS import, frozen theme, the design-system components, version badge, toast, icons.",
+  "dependsOn": [
+   "types"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "src/ui/**"
+  ],
+  "foundationSections": [
+   "05",
+   "09"
+  ]
+ },
+ {
+  "key": "platform",
+  "title": "Platform adapter",
+  "folder": "src/platform",
+  "responsibility": "Hides web, Android and desktop differences behind PlatformAdapter.",
+  "dependsOn": [
+   "config",
+   "types"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "src/platform/**"
+  ],
+  "foundationSections": [
+   "01",
+   "04",
+   "05"
+  ]
+ },
+ {
+  "key": "analytics",
+  "title": "Analytics",
+  "folder": "src/analytics",
+  "responsibility": "Typed event catalogue, consent, the gtag and collect transports, page-speed and error capture.",
+  "dependsOn": [
+   "config",
+   "types",
+   "settings",
+   "platform"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "src/analytics/**"
+  ],
+  "foundationSections": [
+   "04",
+   "05",
+   "15"
+  ]
+ },
+ {
+  "key": "auth",
+  "title": "Sign-in",
+  "folder": "src/auth",
+  "responsibility": "Firebase Auth session, all sign-in methods, the desktop bridge page, ID tokens for server calls.",
+  "dependsOn": [
+   "config",
+   "types",
+   "platform",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "sign-in"
+  ],
+  "ownsFiles": [
+   "src/auth/**"
+  ],
+  "foundationSections": [
+   "01",
+   "05",
+   "09",
+   "10",
+   "11"
+  ]
+ },
+ {
+  "key": "account",
+  "title": "Account and ledger",
+  "folder": "src/account",
+  "responsibility": "Live account and ledger, profile document, Profile screen.",
+  "dependsOn": [
+   "config",
+   "types",
+   "auth",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "profile"
+  ],
+  "ownsFiles": [
+   "src/account/**"
+  ],
+  "foundationSections": [
+   "05",
+   "06",
+   "09",
+   "10",
+   "11"
+  ]
+ },
+ {
+  "key": "billing",
+  "title": "Billing",
+  "folder": "src/billing",
+  "responsibility": "Client rails, catalogue, purchases, reconcile triggers, Top Up screen.",
+  "dependsOn": [
+   "config",
+   "types",
+   "platform",
+   "auth",
+   "account",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "top-up"
+  ],
+  "ownsFiles": [
+   "src/billing/**"
+  ],
+  "foundationSections": [
+   "01",
+   "04",
+   "05",
+   "07",
+   "09",
+   "10",
+   "11"
+  ]
+ },
+ {
+  "key": "chart",
+  "title": "Chart",
+  "folder": "src/chart",
+  "responsibility": "Swiss Ephemeris calculation, places, time zones, element views, Birth details screen.",
+  "dependsOn": [
+   "config",
+   "types",
+   "auth",
+   "account",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "birth-details"
+  ],
+  "ownsFiles": [
+   "src/chart/**",
+   "public/geo/**"
+  ],
+  "foundationSections": [
+   "04",
+   "05",
+   "06",
+   "09",
+   "10",
+   "11"
+  ]
+ },
+ {
+  "key": "wheel",
+  "title": "Chart wheel",
+  "folder": "src/wheel",
+  "responsibility": "The real 3D wheel and the flat vector wheel used by share and PDF.",
+  "dependsOn": [
+   "types",
+   "settings",
+   "ui"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "src/wheel/**"
+  ],
+  "foundationSections": [
+   "04",
+   "05"
+  ]
+ },
+ {
+  "key": "lessons",
+  "title": "Lessons",
+  "folder": "src/lessons",
+  "responsibility": "Authored lesson text and the computed You and [element].",
+  "dependsOn": [
+   "types"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "src/lessons/**"
+  ],
+  "foundationSections": [
+   "04",
+   "05"
+  ]
+ },
+ {
+  "key": "voice",
+  "title": "Voice",
+  "folder": "src/voice",
+  "responsibility": "Supertonic download, calibration, sentence segmenting, worker pool, gapless queue, Voice setup screen.",
+  "dependsOn": [
+   "config",
+   "types",
+   "settings",
+   "platform",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "voice-setup"
+  ],
+  "ownsFiles": [
+   "src/voice/**",
+   "public/ort/**"
+  ],
+  "foundationSections": [
+   "04",
+   "05",
+   "09",
+   "10",
+   "11",
+   "12"
+  ]
+ },
+ {
+  "key": "room",
+  "title": "Room",
+  "folder": "src/room",
+  "responsibility": "Puppet motion over the clean plate, ambience and sound effects, motion pause rule.",
+  "dependsOn": [
+   "types",
+   "settings",
+   "ui"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "src/room/**"
+  ],
+  "foundationSections": [
+   "05",
+   "09"
+  ]
+ },
+ {
+  "key": "reading",
+  "title": "Reading",
+  "folder": "src/reading",
+  "responsibility": "Prompt assembly, key cache, streaming, resume, sentence and cue hand-off, conversation storage.",
+  "dependsOn": [
+   "config",
+   "types",
+   "auth",
+   "account",
+   "chart",
+   "voice",
+   "analytics"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "src/reading/**"
+  ],
+  "foundationSections": [
+   "04",
+   "05",
+   "06",
+   "07",
+   "13"
+  ]
+ },
+ {
+  "key": "share",
+  "title": "Sheets",
+  "folder": "src/share",
+  "responsibility": "Synastry sheet, Share sheet, the public shared chart page.",
+  "dependsOn": [
+   "config",
+   "types",
+   "platform",
+   "auth",
+   "chart",
+   "wheel",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "synastry-share-sheets"
+  ],
+  "ownsFiles": [
+   "src/share/**"
+  ],
+  "foundationSections": [
+   "05",
+   "06",
+   "09",
+   "10",
+   "11"
+  ]
+ },
+ {
+  "key": "souvenir",
+  "title": "Souvenir",
+  "folder": "src/souvenir",
+  "responsibility": "Snapshot, element generation client, replay audio, PDF renderer, atelier package, delivery client, Souvenir offer screen.",
+  "dependsOn": [
+   "config",
+   "types",
+   "platform",
+   "auth",
+   "account",
+   "billing",
+   "chart",
+   "wheel",
+   "voice",
+   "reading",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "souvenir-offer",
+   "souvenir-pdf-opening",
+   "souvenir-pdf-elements"
+  ],
+  "ownsFiles": [
+   "src/souvenir/**"
+  ],
+  "foundationSections": [
+   "04",
+   "05",
+   "06",
+   "07",
+   "09",
+   "10",
+   "11",
+   "14"
+  ]
+ },
+ {
+  "key": "souvenir-runtime",
+  "title": "Frozen atelier page",
+  "folder": "src/souvenir-runtime",
+  "responsibility": "The stand-alone static page that replays a saved reading; second Vite entry.",
+  "dependsOn": [
+   "types",
+   "wheel",
+   "room",
+   "ui"
+  ],
+  "screens": [
+   "souvenir-atelier"
+  ],
+  "ownsFiles": [
+   "src/souvenir-runtime/**",
+   "souvenir.html"
+  ],
+  "foundationSections": [
+   "09",
+   "10",
+   "14"
+  ]
+ },
+ {
+  "key": "atelier",
+  "title": "Atelier",
+  "folder": "src/atelier",
+  "responsibility": "The atelier screens, stage swap, conversation panel, lesson view, status line.",
+  "dependsOn": [
+   "config",
+   "types",
+   "settings",
+   "platform",
+   "auth",
+   "account",
+   "billing",
+   "chart",
+   "wheel",
+   "lessons",
+   "voice",
+   "room",
+   "reading",
+   "share",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "atelier",
+   "atelier-desktop",
+   "atelier-chart-lesson"
+  ],
+  "ownsFiles": [
+   "src/atelier/**"
+  ],
+  "foundationSections": [
+   "05",
+   "09",
+   "10",
+   "11",
+   "12",
+   "13"
+  ]
+ },
+ {
+  "key": "modalities",
+  "title": "Modalities",
+  "folder": "src/modalities",
+  "responsibility": "Modality registry, the splash, natal as module one, locked manifests.",
+  "dependsOn": [
+   "types",
+   "auth",
+   "account",
+   "atelier",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "pick-a-modality"
+  ],
+  "ownsFiles": [
+   "src/modalities/**"
+  ],
+  "foundationSections": [
+   "04",
+   "05",
+   "09",
+   "10",
+   "11"
+  ]
+ },
+ {
+  "key": "landing",
+  "title": "Landing",
+  "folder": "src/landing",
+  "responsibility": "Both landing layouts, live example chart, product-preselecting buttons, install links.",
+  "dependsOn": [
+   "config",
+   "types",
+   "platform",
+   "auth",
+   "billing",
+   "chart",
+   "wheel",
+   "room",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "landing-desktop",
+   "landing-phone"
+  ],
+  "ownsFiles": [
+   "src/landing/**"
+  ],
+  "foundationSections": [
+   "05",
+   "09",
+   "10",
+   "11",
+   "15"
+  ]
+ },
+ {
+  "key": "info",
+  "title": "Settings and About",
+  "folder": "src/info",
+  "responsibility": "Settings, About, licence texts, Terms and Privacy pages.",
+  "dependsOn": [
+   "config",
+   "types",
+   "settings",
+   "platform",
+   "auth",
+   "voice",
+   "reading",
+   "chart",
+   "analytics",
+   "ui"
+  ],
+  "screens": [
+   "settings",
+   "about"
+  ],
+  "ownsFiles": [
+   "src/info/**"
+  ],
+  "foundationSections": [
+   "05",
+   "09",
+   "10",
+   "11",
+   "17"
+  ]
+ },
+ {
+  "key": "app",
+  "title": "App shell",
+  "folder": "src/app",
+  "responsibility": "Boot, secure-origin rule, routes and gates, lifecycle reconcile, PWA update, lazy-chunk recovery.",
+  "dependsOn": [
+   "config",
+   "types",
+   "settings",
+   "platform",
+   "ui",
+   "analytics",
+   "auth",
+   "account",
+   "billing",
+   "chart",
+   "voice",
+   "modalities",
+   "landing",
+   "info",
+   "souvenir",
+   "share"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "src/app/**",
+   "index.html"
+  ],
+  "foundationSections": [
+   "01",
+   "05",
+   "09",
+   "16"
+  ]
+ },
+ {
+  "key": "server-core",
+  "title": "Server core",
+  "folder": "server/core",
+  "responsibility": "Router, adapters, CORS, auth, Firestore admin, errors, Firestore rules and indexes.",
+  "dependsOn": [
+   "types"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "server/core/**",
+   "server/adapters/**",
+   "netlify/**",
+   "firestore.rules",
+   "firestore.indexes.json",
+   "firebase.json"
+  ],
+  "foundationSections": [
+   "05",
+   "06",
+   "07",
+   "08"
+  ]
+ },
+ {
+  "key": "server-billing",
+  "title": "Server billing",
+  "folder": "server/billing",
+  "responsibility": "Server rails, reconcile and credit grant, webhook handler.",
+  "dependsOn": [
+   "server-core",
+   "server-keys",
+   "types"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "server/billing/**"
+  ],
+  "foundationSections": [
+   "04",
+   "06",
+   "07"
+  ]
+ },
+ {
+  "key": "server-keys",
+  "title": "Server keys",
+  "folder": "server/keys",
+  "responsibility": "OpenRouter key mint, usage settlement, key retirement.",
+  "dependsOn": [
+   "server-core",
+   "types"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "server/keys/**"
+  ],
+  "foundationSections": [
+   "04",
+   "06",
+   "07"
+  ]
+ },
+ {
+  "key": "server-souvenir",
+  "title": "Server souvenir",
+  "folder": "server/souvenir",
+  "responsibility": "Keepsake element generation, chunk upload, publish, email, links on the ledger.",
+  "dependsOn": [
+   "server-core",
+   "types"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "server/souvenir/**"
+  ],
+  "foundationSections": [
+   "04",
+   "06",
+   "07",
+   "14"
+  ]
+ },
+ {
+  "key": "server-collect",
+  "title": "Server collect",
+  "folder": "server/collect",
+  "responsibility": "Measurement Protocol relay for the shells.",
+  "dependsOn": [
+   "server-core",
+   "types"
+  ],
+  "screens": [],
+  "ownsFiles": [
+   "server/collect/**"
+  ],
+  "foundationSections": [
+   "07",
+   "15"
+  ]
+ },
+ {
+  "key": "shells",
+  "title": "Tauri shells",
+  "folder": "src-tauri",
+  "responsibility": "Tauri config, Rust commands, Android plugin and activity, signing wiring.",
+  "dependsOn": [],
+  "screens": [],
+  "ownsFiles": [
+   "src-tauri/**"
+  ],
+  "foundationSections": [
+   "01",
+   "16",
+   "17"
+  ]
+ },
+ {
+  "key": "docs",
+  "title": "Documents",
+  "folder": "DOCS",
+  "responsibility": "The PRD, analytics contract, hosting note, WooCommerce plugin requirements, README.",
+  "dependsOn": [],
+  "screens": [],
+  "ownsFiles": [
+   "DOCS/PRD.md",
+   "DOCS/ANALYTICS.md",
+   "DOCS/HOSTING.md",
+   "DOCS/WOOCOMMERCE-PLUGIN.md",
+   "README.md"
+  ],
+  "foundationSections": [
+   "07",
+   "15",
+   "16"
+  ]
+ },
+ {
+  "key": "build",
+  "title": "Build",
+  "folder": "scripts",
+  "responsibility": "build_all.sh, env resolver, tokens, deploy, packages, manifest, .env.example.",
+  "dependsOn": [],
+  "screens": [],
+  "ownsFiles": [
+   "build_all.sh",
+   "scripts/*.mjs",
+   "scripts/version-state.json",
+   ".env.example",
+   ".gitignore",
+   "package.json",
+   "pnpm-lock.yaml",
+   "vite.config.ts",
+   "vite.souvenir.config.ts",
+   "tsconfig.json",
+   "design-system/tokens.css"
+  ],
+  "foundationSections": [
+   "08",
+   "16"
+  ]
+ }
+]

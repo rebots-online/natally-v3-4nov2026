@@ -1,0 +1,30 @@
+/* Classes the frozen phone landing defines for itself (LIBS/UI/STITCH/screens/landing-phone/index.html), and the desktop's flatness rule. */
+.landing-phone .eyebrow {
+  color: #b9a0e8;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+.landing-phone .btn-gold {
+  background-color: #c9a24a;
+  color: #120c1c;
+  font-family: var(--font-brand);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  transition: background-color 0.15s ease;
+}
+.landing-phone .btn-gold:hover { background-color: #d8b259; }
+.landing-phone .btn-gold:disabled { opacity: 0.4; cursor: not-allowed; }
+.landing-phone .btn-secondary {
+  background-color: #2a1d3d;
+  border: 1px solid #3a2d50;
+  color: #f1e8d8;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.landing-phone .btn-secondary:hover { border-color: #c9a24a; }
+/* "No gradients and no glows", as the desktop screen specifies. */
+.landing-desktop *, .landing-desktop *::before, .landing-desktop *::after { box-shadow: none !important; text-shadow: none !important; }
